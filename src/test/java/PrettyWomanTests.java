@@ -1,5 +1,3 @@
-package HW04;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -26,7 +24,7 @@ public class PrettyWomanTests extends BaseTest {
         String peopleFoundOnPage = driver.findElement(By.xpath(Locators.textPeopleFoundOnPage)).getText();
 
 
-        Assert.assertEquals(peopleFoundOnPage ,"People found: 61");  // need get data from DB or API
+        Assert.assertEquals(peopleFoundOnPage ,"People found: 71");  // need get data from DB or API
 
     }
 }

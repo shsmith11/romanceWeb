@@ -1,39 +1,40 @@
-package HW04;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.Random;
-
 public class Locators {
     // MAIN PAGE LOCATORS
+    //Header locators
+   // public static String navMenuItemHome ="//ul/li[@class='nav-item']/a[@href='#']";
+
     //Nav bar locators
     public static String navMenuItemHome ="//ul/li[@class='nav-item']/a[@href='#']";
     public static String navMenuItemTourToUkraine ="(//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine'])[2]";
 
     //body locators
-    public static String buttonJoinForFree="//*[@id='show-registration-block']";
-    public static String buttonRequestTourInfo ="//*[@href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc']";
+    public static String buttonJoinForFree="//button[@id='show-registration-block']";
+    public static String buttonRequestTourInfo ="//a[@href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc']";
     public static String textSectionThirdParagraph ="//*[@id='about']//p[3]";
     public static String textSectionHeader ="//section[@id='about']//div/h2[@class='section-heading ']";
-    public static String carouselInner ="//*[@id='carouselExampleIndicators']/div[@class='carousel-inner']";
-    public static String textSectionBoldText ="//*[contains(text(),'Request Tour Info')]";
+    public static String carouselInner ="//a[@id='carouselExampleIndicators']/div[@class='carousel-inner']";
+    public static String textSectionBoldText ="//p//b[contains(text(),'Request Tour Info')]";
     public static String linkFacebookFooter ="//a[contains(@href,'faceMainbook')]";
 
-    //Sign form page 1 locators
+    //Home page pop up Sign form page 1 locators
     public static String inputSignUpFormLoginXpath = "//input[@id='email']";
     public static String inputSignUpFormPassXpath = "//input[@id='password']";
-    public static String buttonNextSignUpFormXpath = "//*[@data-action='next-page'][text()='Next']";
-    //Sign form page 2 locators
-    public static String inputSignUpFormUserNameXpath = "//*[@id='nickname']";
-    public static String DropDownOpenedSignUpFormDayXpath = "//*[@class='dropdown-menu show']/li[@data-value="+ Helpers.randomInt(1,30) +"]";  //1 .. 30
-    public static String DropDownOpenedSignUpFormMonthXpath = "//*[@class='dropdown-menu show']/li[@data-type="+ Helpers.randomInt(0,11) +"]"; //0 .. 11
-    public static String DropDownOpenedSignUpFormYearXpath = "//*[@class='dropdown-menu show']/li[@data-value="+ Helpers.randomInt(1940,2002) +"]"; //1940 .. 2002
-    public static String DropDownSignUpFormDayXpath = "//*[@id='daySelect']";
-    public static String DropDownSignUpFormMonthXpath = "//*[@id='monthSelect']";
+    public static String buttonNextSignUpFormXpath = "//button[@data-action='next-page'][text()='Next']";
+    //Home page pop up Sign form page 2 locators
+    public static String inputSignUpFormUserNameXpath = "//input[@id='nickname']";
+    public static String dropDownOpenedSignUpFormDayXpath = "//ul[@class='dropdown-menu show']//li[@data-value="+ Helpers.randomInt(1,30) +"]";  //1 .. 30
+    public static String dropDownOpenedSignUpFormMonthXpath = "//ul[@class='dropdown-menu show']//li[@data-type="+ Helpers.randomInt(0,11) +"]"; //0 .. 11
+    public static String dropDownOpenedSignUpFormYearXpath = "//ul[@class='dropdown-menu show']//li[@data-value="+ Helpers.randomInt(1940,2002) +"]"; //1940 .. 2002
+    public static String dropDownSignUpFormDayXpath = "//div[@id='daySelect']";
+    public static String dropDownSignUpFormMonthXpath = "//div[@id='monthSelect']";
+    public static String dropDownSignUpFormYearXpath = "//div[@id='yearSelect']";
     public static String inputPhoneXpath = "//input[@name='data[phone]']";
-    public static String inputLocationXpath = "//ul/li[@city='356107']";   // city Tampa,fl,US. need .sendkey "tampa"
+    public static String inputLocationXpath = "//input[@name='region_name']";
+    public static String inputLocationEnteredCityXpath = "//ul//li[@city='356107']";   // city Tampa,fl,US. need .sendkey "tampa"
     public static String checkboxXpath = "//input[@type='checkbox'][@name='data[confirmation]']";
 
     // Example of By class variable
@@ -65,5 +66,11 @@ public class Locators {
     public static String buttonLOgIn = "//button[@name='logbtn']";
     public static String popUpErrorBar ="//div[@class='error alert-danger alert-warning_pop_']";
 
-
+    //left corner menu
+    public static String menuLeftTopCorner = "//div[@class='menu-item']";
+    public static String menuLeftItemHome = "//a[@id='user_main-menu-home-item']";
+    public static String menuLeftItemSignUp = "//a[@id='user_main-menu-registration-item']";
+    public static String menuLeftItemLogIn = "//a[@id='user_main-menu-login-item']";
+    public static String menuLeftItemNews = "//a[@id='user_main-menu-news-item']";
+    public static String menuLeftItemPolls = "user_guest-main-polls-item";
 }

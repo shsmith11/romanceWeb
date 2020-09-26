@@ -1,8 +1,5 @@
-package HW04;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -17,8 +14,10 @@ public class PhotosTests extends BaseTest{
 
     @Test
     public void isPhotoPage(){
-        Assert.assertEquals(driver.getTitle(), "Pilot Group : Photo gallery");
+        Assert.assertEquals(driver.getTitle(), "Ukrainian women photos: ladies pictures at Marry Ukrainian Lady");
     }
+
+
 
     @Test
     public void isPicturesLoaded(){

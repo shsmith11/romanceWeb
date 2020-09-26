@@ -1,5 +1,3 @@
-package HW04;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +14,8 @@ final public class PagesLinks {
     public static String blogUrl = "https://romanceabroad.com/content/view/blog";
     public static String signInUrl = "https://romanceabroad.com/users/login_form";
 //__________________________________________
+
+    public static String registrationUserForm = "https://romanceabroad.com/users/registration/";
 
 
 }
