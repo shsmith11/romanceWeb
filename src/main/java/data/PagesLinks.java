@@ -1,6 +1,6 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+package data;
+
+import pageObjects.*;
 
 final public class PagesLinks {
 // NAV MENU links__________________________
@@ -12,10 +12,10 @@ final public class PagesLinks {
     public static String giftsUrl = "https://romanceabroad.com/store/category-sweets";
     public static String tourToUkraineUrl = "https://romanceabroad.com/store/sweets/20-tour_to_ukraine";
     public static String blogUrl = "https://romanceabroad.com/content/view/blog";
-    public static String signInUrl = "https://romanceabroad.com/users/login_form";
+    public static String logInUrl = "https://romanceabroad.com/users/login_form";
 //__________________________________________
 
-    public static String registrationUserForm = "https://romanceabroad.com/users/registration/";
+    public static String registrationUserPage = "https://romanceabroad.com/users/registration/";
 
 
 }

@@ -1,30 +1,22 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import data.Data;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pageObjects.PrettyWomanPage;
 
 public class PrettyWomanTests extends BaseTest {
-    @BeforeMethod
-    public void openUrl(){openPage(PagesLinks.prettyWomanUrl);}
 
     @Test
     public void isPrettyWomanPage(){
-        Assert.assertEquals(driver.getTitle(), "Meet single Ukrainian women online: dating and marriage at Marry Ukrainian Lady");
+        PrettyWomanPage prettyWomanPage = new PrettyWomanPage(driver);
+        Assert.assertEquals(driver.getTitle(),prettyWomanPage.pageTitleExpected());
     }
 
     @Test
-    public void checkSearchButtonResult(){
-        //driver.findElement(By.xpath(Locators.dropDownMinAge)).click();
-        driver.findElement(By.xpath(Locators.dropDownMinAgeSelected)).click();
-        //driver.findElement(By.xpath(Locators.dropDownMaxAge)).click();
-        driver.findElement(By.xpath(Locators.dropDownMaxAgeSelected)).click();
-        driver.findElement(By.xpath(Locators.inputSearchButton)).click();
-        explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='main_users_results']")));
-        String peopleFoundOnPage = driver.findElement(By.xpath(Locators.textPeopleFoundOnPage)).getText();
-
-
-        Assert.assertEquals(peopleFoundOnPage ,"People found: 71");  // need get data from DB or API
+    public void checkSearchButtonResult() throws InterruptedException {
+        PrettyWomanPage prettyWomanPage = new PrettyWomanPage(driver);
+        prettyWomanPage.setMinMaxAgeSelect(Data.minAgePrettywomanPage,Data.maxAgePrettywomanPage);
+        prettyWomanPage.buttonSearch().click();
+        Assert.assertTrue(prettyWomanPage.imageSearchResult());  // need get data from DB or API
 
     }
 }

@@ -1,3 +1,5 @@
+import data.Locators;
+import data.PagesLinks;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,15 +11,11 @@ import java.util.List;
 
 public class PhotosTests extends BaseTest{
 
-    @BeforeMethod
-    public void openUrl(){openPage(PagesLinks.photosUrl);}
 
     @Test
     public void isPhotoPage(){
         Assert.assertEquals(driver.getTitle(), "Ukrainian women photos: ladies pictures at Marry Ukrainian Lady");
     }
-
-
 
     @Test
     public void isPicturesLoaded(){
