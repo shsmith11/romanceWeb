@@ -36,8 +36,7 @@ public class PrettyWomanPage extends BasePage {
     }
     public boolean imageSearchResult() {
         explicitWait.until(ExpectedConditions.visibilityOfAllElements(imageBlock()));
-        List<WebElement> imagesList;
-        imagesList = driver.findElements(By.xpath(Locators.imageSearchResult));
+        List<WebElement> imagesList = driver.findElements(By.xpath(Locators.imageSearchResult));;
         return imagesList.size()>0;
     }
 

@@ -8,8 +8,10 @@ final public class Locators {
     // MAIN PAGE LOCATORS
     //Header locators
     //Nav bar locators
+    public static String navMenuItems="//div/ul/li[@class='nav-item']";
     public static String navMenuItemHome ="//ul/li[@class='nav-item']/a[@href='#']";
     public static String navMenuItemTourToUkraine ="(//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine'])[2]";
+    public static String navMenuClosed ="//div/a[@class='uam-top link-open-menu btn-slide']";
 
     //body locators
     public static String buttonJoinForFree="//button[@id='show-registration-block']";

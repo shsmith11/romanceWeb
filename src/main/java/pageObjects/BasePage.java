@@ -13,7 +13,6 @@ import java.time.Duration;
 public class BasePage {
 
     protected WebDriver driver;
-    protected String url = PagesLinks.homeUrl;
     protected FluentWait<WebDriver> fluentWait;
     protected WebDriverWait explicitWait;
 
