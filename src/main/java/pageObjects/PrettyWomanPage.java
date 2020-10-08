@@ -19,19 +19,21 @@ public class PrettyWomanPage extends BasePage {
     public WebElement textPeopleFoundOnPage () {return driver.findElement(By.xpath(Locators.textPeopleFoundOnPage));}
     public WebElement imageBlock() { return driver.findElement(By.xpath(Locators.imageBlock));}
 
+    Select selectMinAge;
+    Select selectMaxAge;
 
     public PrettyWomanPage(WebDriver driver) {
         super(driver);
         openPage(PagesLinks.prettyWomanUrl);
+        selectMinAge = new Select(dropDownMinAge());
+        selectMaxAge = new Select(dropDownMaxAge());
     }
     public String pageTitleExpected(){
         return "Meet single Ukrainian women online: dating and marriage at Marry Ukrainian Lady";
     }
 
     public void setMinMaxAgeSelect(int min, int max){
-        Select selectMinAge = new Select(dropDownMinAge());
         selectMinAge.selectByValue(Helpers.toString(min));
-        Select selectMaxAge = new Select(dropDownMaxAge());
         selectMaxAge.selectByValue(Helpers.toString(max));
     }
     public boolean imageSearchResult() {

@@ -12,7 +12,6 @@ public class LogInTests extends BaseTest{
 
     @Test
     public void signInIncorrectErrorShowsUp(){
-        LoginPage loginPage = new LoginPage(driver);
         explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locators.buttonLOgIn)));
         driver.findElement(By.xpath(Locators.inputEmail)).sendKeys(Data.emailLogin);
         driver.findElement(By.xpath(Locators.inputPass)).sendKeys(Data.passLogin);

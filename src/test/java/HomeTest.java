@@ -1,6 +1,6 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObjects.HomePage;
+
 
 public class HomeTest extends BaseTest {
 
@@ -19,7 +19,7 @@ public class HomeTest extends BaseTest {
     }
     @Test
     public void navMenuOpenLinksCheck(){
-        homePage.getAllNavMenuPagesTitles();
-        Assert.assertFalse(homePage.checkAllTitlesFromNavMenu());
+        leftCornerMenuPage.getAllNavMenuPagesTitles();
+        Assert.assertFalse(leftCornerMenuPage.checkAllTitlesFromNavMenu());
     }
 }

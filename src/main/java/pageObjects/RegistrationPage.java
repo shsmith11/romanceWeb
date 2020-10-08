@@ -11,11 +11,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.concurrent.TimeUnit;
+
 public class RegistrationPage extends BasePage{
+    Select selectRegistrationFormDay;
+    Select selectRegistrationFormMonth;
+    Select selectRegistrationFormYear;
 
     public RegistrationPage(WebDriver driver) {
         super(driver);
 
+          selectRegistrationFormDay = new Select(selectRegFormDayXpath());
+          selectRegistrationFormMonth = new Select(selectRegFormMonthXpath());
+          selectRegistrationFormYear = new Select(selectRegFormYearXpath());
     }
     // 1 page
     public WebElement buttonJoinForFree (){return driver.findElement(By.xpath(Locators.buttonJoinForFree));}
@@ -78,9 +86,6 @@ public class RegistrationPage extends BasePage{
         dropDownOpenedSignUpFormYearXpath().click();
     }
     public void selectDateOnReg(){
-        Select selectRegistrationFormDay = new Select(selectRegFormDayXpath());
-        Select selectRegistrationFormMonth = new Select(selectRegFormMonthXpath());
-        Select selectRegistrationFormYear = new Select(selectRegFormYearXpath());
         selectRegistrationFormDay.selectByValue(Data.dayReg);
         selectRegistrationFormMonth.selectByValue(Data.monthReg);
         selectRegistrationFormYear.selectByValue(Data.yearReg);
@@ -91,10 +96,12 @@ public class RegistrationPage extends BasePage{
     public void inputLocation(){ // Tampa, FL, US
         explicitWait.until(ExpectedConditions.attributeToBeNotEmpty(inputLocationXpath(),"title"));
         inputLocationXpath().click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         inputLocationXpath().sendKeys(Keys.CONTROL+ "A");
         inputLocationXpath().sendKeys(Keys.BACK_SPACE);
         inputLocationXpath().sendKeys(Data.locationReg);
-        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(Locators.inputLocationEnteredCityXpath)));
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        //explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(Locators.inputLocationEnteredCityXpath)));
         inputLocationEnteredCityXpath().click();
     }
     public void inputCheckBox(WebElement checkBox){

@@ -1,2 +1,2 @@
-public class BlogTests {
+public class BlogTests extends BaseTest{
 }

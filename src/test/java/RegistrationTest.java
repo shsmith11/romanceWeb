@@ -1,9 +1,5 @@
 import data.Data;
 import data.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.RegistrationPage;
@@ -11,7 +7,7 @@ import pageObjects.RegistrationPage;
 public class RegistrationTest extends BaseTest{
 
     @Test         // sign up through "JOIN FOR FREE NOW" button at home page with POPUP frames
-    public void signUpDataValidationPopUpHome() throws InterruptedException {
+    public void signUpDataValidationPopUpHome() {
         RegistrationPage registrationForm = new RegistrationPage(driver);
         registrationForm.openFormPopUpFromHome();
         //1page
@@ -30,7 +26,6 @@ public class RegistrationTest extends BaseTest{
 
     @Test         // sign up through "Registration page"
     public void signUpDataValidationRegistrationPage(){
-        RegistrationPage userRegistrationPage = new RegistrationPage(driver);
         userRegistrationPage.openPage(PagesLinks.registrationUserPage);
         userRegistrationPage.inputEmail(Data.emailReg, userRegistrationPage.inputRegFormEmailXpath());//Random email
         userRegistrationPage.inputUser(Data.userReg, userRegistrationPage.inputRegFormUserNameXpath()); //Random user
