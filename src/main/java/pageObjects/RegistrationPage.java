@@ -21,9 +21,7 @@ public class RegistrationPage extends BasePage{
     public RegistrationPage(WebDriver driver) {
         super(driver);
 
-          selectRegistrationFormDay = new Select(selectRegFormDayXpath());
-          selectRegistrationFormMonth = new Select(selectRegFormMonthXpath());
-          selectRegistrationFormYear = new Select(selectRegFormYearXpath());
+
     }
     // 1 page
     public WebElement buttonJoinForFree (){return driver.findElement(By.xpath(Locators.buttonJoinForFree));}
@@ -64,7 +62,6 @@ public class RegistrationPage extends BasePage{
 
 
     public void openFormPopUpFromHome(){
-        openPage(PagesLinks.mainUrl);
         buttonJoinForFree().click();
     }
     public void inputEmail(String email,WebElement inputEmail){
@@ -86,6 +83,9 @@ public class RegistrationPage extends BasePage{
         dropDownOpenedSignUpFormYearXpath().click();
     }
     public void selectDateOnReg(){
+        selectRegistrationFormDay = new Select(selectRegFormDayXpath());
+        selectRegistrationFormMonth = new Select(selectRegFormMonthXpath());
+        selectRegistrationFormYear = new Select(selectRegFormYearXpath());
         selectRegistrationFormDay.selectByValue(Data.dayReg);
         selectRegistrationFormMonth.selectByValue(Data.monthReg);
         selectRegistrationFormYear.selectByValue(Data.yearReg);

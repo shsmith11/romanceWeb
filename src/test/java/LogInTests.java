@@ -9,7 +9,10 @@ import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 
 public class LogInTests extends BaseTest{
-
+    @BeforeMethod
+    public void preSetPage() {
+        openPage(PagesLinks.logInUrl);
+    }
     @Test
     public void signInIncorrectErrorShowsUp(){
         explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locators.buttonLOgIn)));

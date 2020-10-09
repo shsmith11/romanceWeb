@@ -1,32 +1,22 @@
 package pageObjects;
 
 import data.Locators;
-import data.PagesLinks;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class HomePage extends BasePage{
 
     public WebElement iFrameVideoYoutube (){return driver.findElement(By.xpath(Locators.iFrameVideoYoutube));}
-    public WebElement iFrameVideoYoutubeUnstarted (){return driver.findElement(By.xpath(Locators.iFrameVideoYoutubeUnstarted));}
+    //public WebElement iFrameVideoYoutubeUnstarted (){return driver.findElement(By.xpath(Locators.iFrameVideoYoutubeUnstarted));}
     public WebElement iFrameVideoYoutubePlaying (){return driver.findElement(By.xpath(Locators.iFrameVideoYoutubePlaying));}
     public WebElement buttonIFrameVideoYoutube (){return driver.findElement(By.xpath(Locators.buttonIFrameVideoYoutube));}
 
-    public WebElement navMenuClosed(){return driver.findElement(By.xpath(Locators.navMenuClosed));}
-    public WebElement title(){return driver.findElement(By.xpath("//title"));}
-
-
-
     public HomePage(WebDriver driver) {
         super(driver);
-        driver.get(PagesLinks.mainUrl);
     }
 
     public boolean isHome(){

@@ -1,8 +1,6 @@
 package pageObjects;
-
 import data.Helpers;
 import data.Locators;
-import data.PagesLinks;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,15 +22,15 @@ public class PrettyWomanPage extends BasePage {
 
     public PrettyWomanPage(WebDriver driver) {
         super(driver);
-        openPage(PagesLinks.prettyWomanUrl);
-        selectMinAge = new Select(dropDownMinAge());
-        selectMaxAge = new Select(dropDownMaxAge());
+
     }
     public String pageTitleExpected(){
         return "Meet single Ukrainian women online: dating and marriage at Marry Ukrainian Lady";
     }
 
     public void setMinMaxAgeSelect(int min, int max){
+        selectMinAge = new Select(dropDownMinAge());
+        selectMaxAge = new Select(dropDownMaxAge());
         selectMinAge.selectByValue(Helpers.toString(min));
         selectMaxAge.selectByValue(Helpers.toString(max));
     }

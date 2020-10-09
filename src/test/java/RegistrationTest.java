@@ -1,13 +1,18 @@
 import data.Data;
 import data.*;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageObjects.RegistrationPage;
 
 public class RegistrationTest extends BaseTest{
-
+    @BeforeMethod
+    public void preSetPage() {
+        openPage(PagesLinks.registrationUserPage);
+    }
     @Test         // sign up through "JOIN FOR FREE NOW" button at home page with POPUP frames
     public void signUpDataValidationPopUpHome() {
+        openPage(PagesLinks.mainUrl);
         RegistrationPage registrationForm = new RegistrationPage(driver);
         registrationForm.openFormPopUpFromHome();
         //1page
@@ -26,7 +31,6 @@ public class RegistrationTest extends BaseTest{
 
     @Test         // sign up through "Registration page"
     public void signUpDataValidationRegistrationPage(){
-        userRegistrationPage.openPage(PagesLinks.registrationUserPage);
         userRegistrationPage.inputEmail(Data.emailReg, userRegistrationPage.inputRegFormEmailXpath());//Random email
         userRegistrationPage.inputUser(Data.userReg, userRegistrationPage.inputRegFormUserNameXpath()); //Random user
         userRegistrationPage.inputPass(Data.passReg, userRegistrationPage.inputRegFormPassXpath());//Random pass

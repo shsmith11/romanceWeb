@@ -30,7 +30,5 @@ public class BasePage {
         action = new Actions(this.driver);
         }
 
-    public void openPage(String url){
-        driver.get(url);
-    }
+
 }

@@ -34,12 +34,15 @@ public class BaseTest {
        driver.manage().window().maximize();
 
    }
-
+    public void openPage(String url){
+        driver.get(url);
+    }
 
     @BeforeMethod
     public void startUpMainPage() {
         startUp();
         driver.manage().window().maximize();
+        openPage(PagesLinks.mainUrl);
    }
 
     @AfterMethod
