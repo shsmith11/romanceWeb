@@ -31,10 +31,13 @@ public class HomePage extends BasePage{
 
     public boolean isClickable(){
         explicitWait.until(ExpectedConditions.elementToBeClickable(iFrameVideoYoutube()));
+        action.moveToElement(iFrameVideoYoutube()).perform();
         driver.switchTo().frame(iFrameVideoYoutube());
         return buttonIFrameVideoYoutube().isEnabled();
     }
     public void clickablePlayButtonCheck() {
+        explicitWait.until(ExpectedConditions.elementToBeClickable(iFrameVideoYoutube()));
+        action.moveToElement(iFrameVideoYoutube()).perform();
         driver.switchTo().frame(iFrameVideoYoutube());
         action.moveToElement(buttonIFrameVideoYoutube()).click().perform();
     }

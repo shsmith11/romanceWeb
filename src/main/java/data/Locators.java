@@ -23,7 +23,7 @@ final public class Locators {
     public static String linkFacebookFooter ="//a[contains(@href,'faceMainbook')]";
     //iFrame Youtube
     public static String iFrameVideoYoutube = "//div[@class='video']/iframe[contains(@src,'youtube')]";
-    public static String buttonIFrameVideoYoutube ="//div/button[@class='ytp-large-play-button ytp-button']";
+    public static String buttonIFrameVideoYoutube ="//button[@class='ytp-large-play-button ytp-button']";
     public static String iFrameVideoYoutubeUnstarted ="//div[contains(@class,'unstarted-mode')]";
     public static String iFrameVideoYoutubePlaying ="//div[contains(@class,'playing-mode')]";
     public static String iFrameVideoYoutubePaused ="//div[contains(@class,'paused-mode')]";

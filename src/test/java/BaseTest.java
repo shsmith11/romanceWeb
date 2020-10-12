@@ -1,11 +1,14 @@
+
+
 import data.PagesLinks;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pageObjects.*;
+
+
 
 public class BaseTest {
     protected WebDriver driver;
@@ -32,6 +35,7 @@ public class BaseTest {
        blogPage = new BlogPage(driver);
        userRegistrationPage = new RegistrationPage(driver);
        driver.manage().window().maximize();
+
 
    }
     public void openPage(String url){

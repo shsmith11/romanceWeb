@@ -1,5 +1,4 @@
 package pageObjects;
-import data.PagesLinks;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
