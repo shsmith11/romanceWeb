@@ -21,6 +21,7 @@ final public class Locators {
     public static String carouselInner ="//a[@id='carouselExampleIndicators']/div[@class='carousel-inner']";
     public static String textSectionBoldText ="//p//b[contains(text(),'Request Tour Info')]";
     public static String linkFacebookFooter ="//a[contains(@href,'faceMainbook')]";
+    public static String textSection="//section//div[@class='col-lg-6']"; // text in the middle of body h2
     //iFrame Youtube
     public static String iFrameVideoYoutube = "//div[@class='video']/iframe[contains(@src,'youtube')]";
     public static String buttonIFrameVideoYoutube ="//button[@class='ytp-large-play-button ytp-button']";

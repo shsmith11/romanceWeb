@@ -7,6 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 public class HomePage extends BasePage{
 
@@ -14,6 +18,7 @@ public class HomePage extends BasePage{
     //public WebElement iFrameVideoYoutubeUnstarted (){return driver.findElement(By.xpath(Locators.iFrameVideoYoutubeUnstarted));}
     public WebElement iFrameVideoYoutubePlaying (){return driver.findElement(By.xpath(Locators.iFrameVideoYoutubePlaying));}
     public WebElement buttonIFrameVideoYoutube (){return driver.findElement(By.xpath(Locators.buttonIFrameVideoYoutube));}
+    public WebElement textSection (){return driver.findElement(By.xpath(Locators.textSection));}
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -44,6 +49,16 @@ public class HomePage extends BasePage{
     public boolean isVideoPlaying(){
         explicitWait.until(ExpectedConditions.elementToBeClickable(iFrameVideoYoutubePlaying()));
         return iFrameVideoYoutubePlaying().isEnabled();
+    }
+
+    public int wordCounter(){
+        List<String> words;
+        words = Arrays.asList(textSection().getText().split(" "));
+        for (int i = 0; i < words.size(); i++) {
+            words.set(i, i+" - " + words.get(i));
+        }
+        System.out.println(words+" TOTAL WORDS - " + words.size());
+        return words.size();
     }
 
 }

@@ -37,7 +37,6 @@ public class BaseTest {
         photosPage = new PhotosPage(driver);
         blogPage = new BlogPage(driver);
         userRegistrationPage = new RegistrationPage(driver);
-        driver.manage().window().maximize();
     }
     //public void openPage(String url){driver.get(url);}
 
@@ -52,12 +51,12 @@ public class BaseTest {
         else if (browser.equalsIgnoreCase("chrome")){
             System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
             driver = new ChromeDriver();
-            driver. get("chrome://settings/clearBrowserData");
+            driver.get("chrome://settings/clearBrowserData");
         }
         else if (browser.equalsIgnoreCase("edge")){
             System.setProperty("webdriver.edge.driver", "msedgedriver.exe");
             driver = new EdgeDriver();
-            //driver.manage().deleteAllCookies();
+            driver.manage().deleteAllCookies();
         }
         else if (browser.equalsIgnoreCase("ie")){
             System.setProperty("webdriver.ie.driver", "IEDriverServer.exe");
