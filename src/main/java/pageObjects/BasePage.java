@@ -1,4 +1,5 @@
 package pageObjects;
+import data.PagesLinks;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -17,12 +18,13 @@ public class BasePage {
     protected WebDriverWait explicitWait;
     protected Actions action;
 
-//    public void openPage(String url){
-//        driver.get(url);
-//    }
+    public void openPage(String url){
+        driver.get(url);
+    }
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
+        openPage(PagesLinks.mainUrl);
         explicitWait = new WebDriverWait(driver, 10);
         this.fluentWait = new FluentWait<>(this.driver)
                 .withTimeout(Duration.ofSeconds(5))

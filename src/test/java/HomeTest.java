@@ -5,10 +5,7 @@ import org.testng.annotations.Test;
 
 
 public class HomeTest extends BaseTest {
-    @BeforeMethod
-    public void preSetPage() {
-        openPage(PagesLinks.mainUrl);
-    }
+
     @Test
     public void isHomePage(){
         Assert.assertTrue(homePage.isHome());

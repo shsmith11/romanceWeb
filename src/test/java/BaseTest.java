@@ -39,9 +39,7 @@ public class BaseTest {
         userRegistrationPage = new RegistrationPage(driver);
         driver.manage().window().maximize();
     }
-    public void openPage(String url){
-        driver.get(url);
-    }
+    //public void openPage(String url){driver.get(url);}
 
     @BeforeMethod
     @Parameters("browser")
@@ -69,8 +67,7 @@ public class BaseTest {
 
         startUp();
         driver.manage().window().maximize();
-        openPage(PagesLinks.mainUrl);
-    }
+       }
 
     @AfterMethod
     public void tearDown() throws InterruptedException {

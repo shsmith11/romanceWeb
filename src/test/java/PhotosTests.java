@@ -5,18 +5,16 @@ import org.testng.annotations.Test;
 
 
 public class PhotosTests extends BaseTest{
-    @BeforeMethod
-    public void preSetPage() {
-        openPage(PagesLinks.photosUrl);
-    }
 
     @Test
     public void isPhotoPage(){
+        photosPage.openPage(PagesLinks.photosUrl);
         Assert.assertTrue(photosPage.getPageTitle());
     }
 
     @Test
     public void isPicturesLoaded(){
+        photosPage.openPage(PagesLinks.photosUrl);
         Assert.assertTrue(photosPage.loadAlbymPictures());
     }
 }

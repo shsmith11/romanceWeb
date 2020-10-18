@@ -8,8 +8,8 @@ public class RegistrationTest extends BaseTest{
 
     @Test         // sign up through "JOIN FOR FREE NOW" button at home page with POPUP frames
     public void signUpDataValidationPopUpHome() {
-        openPage(PagesLinks.mainUrl);
         RegistrationPage registrationForm = new RegistrationPage(driver);
+        registrationForm.openPage(PagesLinks.mainUrl);
         registrationForm.openFormPopUpFromHome();
         //1page
         registrationForm.inputEmail(Data.emailReg, registrationForm.inputSignUpFormLoginXpath()); //Random email
@@ -29,7 +29,7 @@ public class RegistrationTest extends BaseTest{
 
     @Test         // sign up through "Registration page"
     public void signUpDataValidationRegistrationPage(){
-        openPage(PagesLinks.registrationUserPage);
+        userRegistrationPage.openPage(PagesLinks.registrationUserPage);
         userRegistrationPage.inputEmail(Data.emailReg, userRegistrationPage.inputRegFormEmailXpath());//Random email
         userRegistrationPage.inputUser(Data.userReg, userRegistrationPage.inputRegFormUserNameXpath()); //Random user
         userRegistrationPage.inputPass(Data.passReg, userRegistrationPage.inputRegFormPassXpath());//Random pass
