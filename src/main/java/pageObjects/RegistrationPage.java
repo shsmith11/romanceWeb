@@ -1,9 +1,7 @@
 package pageObjects;
 
 import data.Data;
-import data.Helpers;
 import data.Locators;
-import data.PagesLinks;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;

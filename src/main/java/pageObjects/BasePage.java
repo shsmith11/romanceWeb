@@ -17,6 +17,10 @@ public class BasePage {
     protected WebDriverWait explicitWait;
     protected Actions action;
 
+//    public void openPage(String url){
+//        driver.get(url);
+//    }
+
     public BasePage(WebDriver driver) {
         this.driver = driver;
         explicitWait = new WebDriverWait(driver, 10);

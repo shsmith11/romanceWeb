@@ -22,6 +22,18 @@ public class PrettyWomanPage extends BasePage {
 
     public PrettyWomanPage(WebDriver driver) {
         super(driver);
+    }
+
+    public Select selectMinAge(){
+        if (selectMinAge == null) {
+            return new Select(dropDownMinAge());
+        } else return selectMinAge;
+
+    }
+    public Select selectMaxAge(){
+        if (selectMaxAge == null) {
+            return new Select(dropDownMaxAge());
+        } else return selectMaxAge;
 
     }
     public String pageTitleExpected(){
@@ -29,10 +41,8 @@ public class PrettyWomanPage extends BasePage {
     }
 
     public void setMinMaxAgeSelect(int min, int max){
-        selectMinAge = new Select(dropDownMinAge());
-        selectMaxAge = new Select(dropDownMaxAge());
-        selectMinAge.selectByValue(Helpers.toString(min));
-        selectMaxAge.selectByValue(Helpers.toString(max));
+        selectMinAge().selectByValue(Helpers.toString(min));
+        selectMaxAge().selectByValue(Helpers.toString(max));
     }
     public boolean imageSearchResult() {
         explicitWait.until(ExpectedConditions.visibilityOfAllElements(imageBlock()));

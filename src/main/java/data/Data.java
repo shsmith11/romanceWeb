@@ -21,7 +21,7 @@ final public class Data {
 
     //Search Data
     public static int minAgePrettywomanPage = 24;
-    public static int maxAgePrettywomanPage = 70;
+    public static int maxAgePrettywomanPage = 67;
 
 
 

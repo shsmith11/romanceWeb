@@ -16,6 +16,7 @@ public class PrettyWomanTests extends BaseTest {
 
     @Test
     public void checkSearchButtonResult() {
+        //prettyWomanPage.openPage(PagesLinks.prettyWomanUrl);
         prettyWomanPage.setMinMaxAgeSelect(Data.minAgePrettywomanPage,Data.maxAgePrettywomanPage);
         prettyWomanPage.buttonSearch().click();
         Assert.assertTrue(prettyWomanPage.imageSearchResult());  // need get data from DB or API
