@@ -1,18 +1,20 @@
 
-
-import data.PagesLinks;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.opera.OperaOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 import pageObjects.*;
-
 import java.lang.reflect.Method;
 
 
@@ -42,16 +44,26 @@ public class BaseTest {
 
     @BeforeMethod
     @Parameters("browser")
-    public void setup(@Optional ("chrome") String browser, Method method){
+    public void setup(@Optional ("chrome") String browser, Method method) throws InterruptedException {
         if (browser.equalsIgnoreCase("firefox")){
+            FirefoxOptions options = new FirefoxOptions()
+                    .addPreference("dom.webnotifications.enabled", false)
+                    .addPreference("geo.enabled", true)
+                    .addPreference("geo.provider.use_corelocation", true)
+                    .addPreference("geo.prompt.testing", true)
+                    .addPreference("geo.prompt.testing.allow", true);
+
             System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
-            driver = new FirefoxDriver();
+            driver = new FirefoxDriver(options);
             driver.manage().deleteAllCookies();
         }
         else if (browser.equalsIgnoreCase("chrome")){
             System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
             driver = new ChromeDriver();
             driver.get("chrome://settings/clearBrowserData");
+            Thread.sleep(3000);
+            driver.switchTo().activeElement();
+            //driver.findElement(By.cssSelector("* /deep/ #clearBrowsingDataConfirm")).click();
         }
         else if (browser.equalsIgnoreCase("edge")){
             System.setProperty("webdriver.edge.driver", "msedgedriver.exe");
@@ -61,6 +73,15 @@ public class BaseTest {
         else if (browser.equalsIgnoreCase("ie")){
             System.setProperty("webdriver.ie.driver", "IEDriverServer.exe");
             driver = new InternetExplorerDriver();
+            driver.manage().deleteAllCookies();
+        }
+        else if (browser.equalsIgnoreCase("opera")){
+            System.setProperty("webdriver.opera.driver", "operadriver.exe");
+
+            OperaOptions options = new OperaOptions();
+            options.addArguments("--disable-notifications");
+
+            driver = new OperaDriver(options);
             driver.manage().deleteAllCookies();
         }
 

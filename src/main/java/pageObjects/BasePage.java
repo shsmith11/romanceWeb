@@ -1,5 +1,4 @@
 package pageObjects;
-import data.PagesLinks;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -24,14 +23,13 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        openPage(PagesLinks.mainUrl);
         explicitWait = new WebDriverWait(driver, 10);
         this.fluentWait = new FluentWait<>(this.driver)
-                .withTimeout(Duration.ofSeconds(5))
+                .withTimeout(Duration.ofSeconds(3))
                 .pollingEvery(Duration.ofMillis(80))
                 .ignoring(ElementClickInterceptedException.class)
-                .ignoring(StaleElementReferenceException.class)
-                .ignoring(NoSuchElementException.class);
+                .ignoring(StaleElementReferenceException.class);
+                //.ignoring(NoSuchElementException.class);
         action = new Actions(this.driver);
         }
 

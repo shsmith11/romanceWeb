@@ -90,6 +90,7 @@ public class RegistrationPage extends BasePage{
         inputPhone.sendKeys(phone);
     }
     public void inputLocation(){ // Tampa, FL, US
+        //driver.switchTo().alert().dismiss();
         explicitWait.until(ExpectedConditions.attributeToBeNotEmpty(inputLocationXpath(),"title"));
         inputLocationXpath().click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -97,7 +98,6 @@ public class RegistrationPage extends BasePage{
         inputLocationXpath().sendKeys(Keys.BACK_SPACE);
         inputLocationXpath().sendKeys(Data.locationReg);
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        //explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(Locators.inputLocationEnteredCityXpath)));
         inputLocationEnteredCityXpath().click();
     }
     public void inputCheckBox(WebElement checkBox){

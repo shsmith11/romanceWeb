@@ -1,4 +1,6 @@
+import data.Data;
 import data.PagesLinks;
+import data.PagesNames;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -24,8 +26,14 @@ public class HomeTest extends BaseTest {
     @Test
     public void navMenuOpenLinksCheck(){
         leftCornerMenuPage.openPage(PagesLinks.mainUrl);
-        leftCornerMenuPage.getAllNavMenuPagesTitles();
-        Assert.assertFalse(leftCornerMenuPage.checkAllTitlesFromNavMenu());
+        leftCornerMenuPage.getAllNavMenuItems();
+        Assert.assertTrue(leftCornerMenuPage.checkAllNavMenuItems(PagesNames.HOME));
+        Assert.assertTrue(leftCornerMenuPage.checkAllNavMenuItems(PagesNames.WORK));
+        Assert.assertTrue(leftCornerMenuPage.checkAllNavMenuItems(PagesNames.PRETTY));
+        Assert.assertTrue(leftCornerMenuPage.checkAllNavMenuItems(PagesNames.PHOTOS));
+        Assert.assertTrue(leftCornerMenuPage.checkAllNavMenuItems(PagesNames.GIFTS));
+        Assert.assertTrue(leftCornerMenuPage.checkAllNavMenuItems(PagesNames.UKRAINE));
+        Assert.assertTrue(leftCornerMenuPage.checkAllNavMenuItems(PagesNames.BLOG));
     }
     @Test
     public void justFaiTest(){
@@ -33,7 +41,7 @@ public class HomeTest extends BaseTest {
         Assert.fail();
     }
     @Test
-    public void wordCountExample(){
+    public void wordCountExample(){   //example of List and loops
         homePage.openPage(PagesLinks.mainUrl);
         softAssert.assertTrue(homePage.wordCounter()>10);
     }
