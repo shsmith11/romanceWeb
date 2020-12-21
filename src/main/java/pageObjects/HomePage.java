@@ -1,5 +1,6 @@
 package pageObjects;
 
+import data.Helpers;
 import data.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -34,6 +35,7 @@ public class HomePage extends BasePage{
 
     public boolean isClickable(){
         explicitWait.until(ExpectedConditions.elementToBeClickable(iFrameVideoYoutube()));
+        Helpers.ajaxScrollDown(iFrameVideoYoutube());
         action.moveToElement(iFrameVideoYoutube()).perform();
         driver.switchTo().frame(iFrameVideoYoutube());
         return buttonIFrameVideoYoutube().isEnabled();

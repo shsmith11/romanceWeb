@@ -1,7 +1,6 @@
 package data;
 
 import java.util.HashMap;
-import java.util.Map;
 
 final public class Data {
 

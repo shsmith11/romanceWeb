@@ -60,15 +60,16 @@ public class RegistrationPage extends BasePage{
     public void openFormPopUpFromHome(){
         buttonJoinForFree().click();
     }
-    public void inputEmail(String email,WebElement inputEmail){
-        inputEmail.sendKeys(email);
-    }
-    public void inputPass(String pass,WebElement inputPass){
-        inputPass.sendKeys(pass);
-    }
-    public void inputUser(String user, WebElement inputUser){
-        inputUser.sendKeys(user);
-    }
+//    public void inputEmail(String email,WebElement inputEmail){
+//        inputEmail.sendKeys(email);
+//    }
+//    public void inputPass(String pass,WebElement inputPass){
+//        inputPass.sendKeys(pass);
+//    }
+//    public void inputUser(String user, WebElement inputUser){
+//        inputUser.sendKeys(user);
+//    }
+
     public void inputSelectDateOnForm(){
         explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locators.dropDownSignUpFormYearXpath)));
         dropDownSignUpFormDayXpath().click();
@@ -93,11 +94,11 @@ public class RegistrationPage extends BasePage{
         //driver.switchTo().alert().dismiss();
         explicitWait.until(ExpectedConditions.attributeToBeNotEmpty(inputLocationXpath(),"title"));
         inputLocationXpath().click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         inputLocationXpath().sendKeys(Keys.CONTROL+ "A");
         inputLocationXpath().sendKeys(Keys.BACK_SPACE);
         inputLocationXpath().sendKeys(Data.locationReg);
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         inputLocationEnteredCityXpath().click();
     }
     public void inputCheckBox(WebElement checkBox){

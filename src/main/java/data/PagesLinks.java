@@ -25,6 +25,7 @@ final public class PagesLinks {
     public static String tourToUkraineUrl = "https://romanceabroad.com/store/sweets/20-tour_to_ukraine";
     public static String blogUrl = "https://romanceabroad.com/content/view/blog";
     public static String logInUrl = "https://romanceabroad.com/users/login_form";
+    public static String contactUs = "https://romanceabroad.com/tickets";
 //__________________________________________
 
     public static String registrationUserPage = "https://romanceabroad.com/users/registration/";

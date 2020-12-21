@@ -2,6 +2,21 @@
 
 <suite name="TestSuite" parallel="none" >
 
+    <test name="HomeTest" enabled="true">
+        <parameter name="browser" value="ie"/>
+        <groups>
+            <run>
+                <exclude name="ie"/>
+                <include name="admin"/>
+                <include name="user"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name ="RegistrationTest"/>
+        </classes>
+    </test>
+
     <test name="IETestCases" enabled="false">
         <parameter name="browser" value="ie"/>
         <classes>

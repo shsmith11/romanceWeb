@@ -7,23 +7,30 @@ import org.testng.annotations.Test;
 
 public class HomeTest extends BaseTest {
 
-    @Test
+    public static final boolean testCase1 = true;
+    public static final boolean testCase2 = true;
+    public static final boolean testCase3 = true;
+    public static final boolean testCase4 = true;
+    public static final boolean testCase5 = true;
+    public static final boolean testCase6 = true;
+
+    @Test (priority = 2, enabled = testCase1, groups = {"ie"})
     public void isHomePage(){
         homePage.openPage(PagesLinks.mainUrl);
         Assert.assertTrue(homePage.isHome());
     }
-    @Test
+    @Test (priority = 2, enabled = testCase2, groups = {"ie", "user", "admin"})
     public void iFrameButtonTest(){
         homePage.openPage(PagesLinks.mainUrl);
         Assert.assertTrue(homePage.isClickable());
     }
-    @Test
+    @Test (priority = 2, enabled = testCase3, groups = {"ie", "user", "admin"})
     public void iFrameButtonTestAction(){
         homePage.openPage(PagesLinks.mainUrl);
         homePage.clickablePlayButtonCheck();
         Assert.assertTrue(homePage.isVideoPlaying());
     }
-    @Test
+    @Test (priority = 2, enabled = testCase4, groups = {"ie", "user", "admin"})
     public void navMenuOpenLinksCheck(){
         leftCornerMenuPage.openPage(PagesLinks.mainUrl);
         leftCornerMenuPage.getAllNavMenuItems();
@@ -35,12 +42,12 @@ public class HomeTest extends BaseTest {
         Assert.assertTrue(leftCornerMenuPage.checkAllNavMenuItems(PagesNames.UKRAINE));
         Assert.assertTrue(leftCornerMenuPage.checkAllNavMenuItems(PagesNames.BLOG));
     }
-    @Test
+    @Test (priority = 2, enabled = testCase5, groups = {"ie", "user", "admin"})
     public void justFaiTest(){
         homePage.openPage(PagesLinks.mainUrl);
         Assert.fail();
     }
-    @Test
+    @Test (priority = 2, enabled = testCase6, groups = {"ie", "user", "admin"})
     public void wordCountExample(){   //example of List and loops
         homePage.openPage(PagesLinks.mainUrl);
         softAssert.assertTrue(homePage.wordCounter()>10);

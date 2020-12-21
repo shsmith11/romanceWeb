@@ -19,7 +19,10 @@ public class LeftCornerMenuPage extends BasePage{
     }
 
 
-    public List<WebElement> navMenuItemsList(){return driver.findElements(By.xpath(Locators.navMenuItems));}
+    public List<WebElement> navMenuItemsList(){
+        openPage(PagesLinks.mainUrl);
+        return driver.findElements(By.xpath(Locators.navMenuItems));
+    }
     public WebElement headersPages(){return driver.findElement(By.xpath("//h1"));}
     ArrayList<String> actualTitles;
     ArrayList<String> actualUrl;
@@ -33,17 +36,19 @@ public class LeftCornerMenuPage extends BasePage{
             if (navMenuData.get("titles").get(i).contains(Data.getExpectedTitles().get(pageKey))) {assertState++;}
             if (navMenuData.get("h1").get(i).contains(Data.getExpectedH1().get(pageKey))) {assertState++;}
             if (navMenuData.get("urls").get(i).contains(PagesLinks.getNavMenuLinks().get(pageKey))){assertState++;}
-            System.out.println("iteration "+ i + ",  assertState:  " + assertState);
-            System.out.println("Expected titles- " + Data.getExpectedTitles().get(pageKey));
-            System.out.println("Actual titles- " + navMenuData.get("titles").get(i));
-            System.out.println("Expected h1- " + Data.getExpectedH1().get(pageKey));
-            System.out.println("Actual h1- " + navMenuData.get("h1").get(i));
-            System.out.println("Expected urls- " + PagesLinks.getNavMenuLinks().get(pageKey));
-            System.out.println("Actual urls- " + navMenuData.get("urls").get(i));
-            System.out.println("________________________");
-            if (assertState <3) {assertState = 0;} else break;
+            if (assertState>0) {
+                System.out.println("iteration " + i + ",  assertState:  " + assertState);
+                System.out.println("Expected titles- " + Data.getExpectedTitles().get(pageKey));
+                System.out.println("Actual titles- " + navMenuData.get("titles").get(i));
+                System.out.println("Expected h1- " + Data.getExpectedH1().get(pageKey));
+                System.out.println("Actual h1- " + navMenuData.get("h1").get(i));
+                System.out.println("Expected urls- " + PagesLinks.getNavMenuLinks().get(pageKey));
+                System.out.println("Actual urls- " + navMenuData.get("urls").get(i));
+                System.out.println("________________________");
+            }
+            if (assertState <2) {assertState = 0;} else break;
         }
-        return (assertState>=3);
+        return (assertState>=2);
     }
 
     public void getAllNavMenuItems() {
@@ -63,7 +68,7 @@ public class LeftCornerMenuPage extends BasePage{
             catch (NoSuchElementException e){
                 actualH1.add("");
             }
-            driver.navigate().back(); //  or call method - openPage(PagesLinks.mainUrl);
+            navMenuItemsList();
         }
         navMenuData.put("titles", actualTitles);
         navMenuData.put("urls", actualUrl);

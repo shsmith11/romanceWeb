@@ -77,11 +77,30 @@ final public class Locators {
     public static String imageSearchResult = "//div[@class='g-users-gallery__photo']";
 
 
-    // PHOTO page data.Locators
+    // PHOTO page
 
     public static String divGalleryPhotos = "//div[@class='g-users-gallery__item col-xs-6 col-sm-4 col-md-3 col-lg-2 big']";
     public static String divGallery = "//div[@class='wrapper']";
 
+    //BLOG page locators
+    public static String headerMenuOuterContainer = "//div[@class='header-container-outer' and @id='slidemenu-outer']";
+
+    public static String hrefBlogListItem = "div[@class='info-content-block wysiwyg']/ul/li/a[@href='/content/view/beautiful-urkainian-girls']";
+    public static String hrefBlogList = "//div[@class='info-content-block wysiwyg']/ul"; // for array use
+    public static String sideMenuBlog ="div[@class='inside account_menu']/ul"; // for array use
+    public static String headerPhotoMenuBlog = "//div[@class='slick-track']//div[@class='user']"; // for array use
+
+    //CONTACT US locators
+    //public static String selectReason = "//form[@method='post']/div/div/select[@name='id_reason']";
+    public static String selectReason = "//select[@name='id_reason']";
+    public static String inputYourName = "//input[@type='text' and @name='user_name']";
+    public static String inputYourEmail = "//input[@class='form-control' and @name='user_email']";
+    public static String inputSubject = "//input[@class='form-control' and @name='subject']";
+    public static String textAreaYourMsg = "//textarea[@class='form-control' and @name='message']";
+    public static String inputSecurityCaptcha = "//input[@id='g-recaptcha-response' and @name='captcha_code']";
+    public static String imgSecurityCaptcha = "//img[contains(@src,'romanceabroad.com/temp/captcha/')]";
+    public static String buttonSend = "//input[@name='btn_save' and @type='submit']";
+    public static String errorMsg = "//div[@class='ajax_notice']/div[@class='error alert-danger alert-warning_pop_']";
 
     // LOG IN page locators
 
@@ -97,4 +116,15 @@ final public class Locators {
     public static String menuLeftItemLogIn = "//a[@id='user_main-menu-login-item']";
     public static String menuLeftItemNews = "//a[@id='user_main-menu-news-item']";
     public static String menuLeftItemPolls = "user_guest-main-polls-item";
+
+
+
+    //Any page
+
+    public static By H1_TITLE = By.xpath("//h1");
+
+    public void Tttt(){
+
+    }
+
 }

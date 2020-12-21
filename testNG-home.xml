@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuite" parallel="none" >
+
+    <test name="HomeTests" enabled="true">
+        <parameter name="browser" value="firefox"/>
+        <groups>
+            <run>
+                <include name="ie"/>
+                <include name="admin"/>
+                <include name="user"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name ="HomeTest">
+                <methods>
+                    <include name=".*Home.*"/>
+                    <include name=".*Frame.*"/>
+                    <include name="isHomePage"/>
+                    <exclude name="justFaiTest"/>
+                </methods>
+
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>

@@ -42,7 +42,7 @@ public class BaseTest {
     }
     //public void openPage(String url){driver.get(url);}
 
-    @BeforeMethod
+    @BeforeMethod(groups = {"ie", "user", "admin"}, alwaysRun = true)
     @Parameters("browser")
     public void setup(@Optional ("chrome") String browser, Method method) throws InterruptedException {
         if (browser.equalsIgnoreCase("firefox")){

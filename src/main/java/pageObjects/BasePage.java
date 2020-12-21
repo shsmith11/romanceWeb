@@ -6,24 +6,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-
 import java.time.Duration;
 
 public class BasePage {
 
-    protected WebDriver driver;
+    protected static WebDriver driver;
     protected FluentWait<WebDriver> fluentWait;
-    protected WebDriverWait explicitWait;
+    protected static WebDriverWait explicitWait;
     protected Actions action;
-
     public void openPage(String url){
         driver.get(url);
     }
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        explicitWait = new WebDriverWait(driver, 10);
+        this.explicitWait = new WebDriverWait(driver, 10);
         this.fluentWait = new FluentWait<>(this.driver)
                 .withTimeout(Duration.ofSeconds(3))
                 .pollingEvery(Duration.ofMillis(80))
