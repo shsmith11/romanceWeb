@@ -128,8 +128,7 @@ public class RegistrationPage extends BasePage{
     public void inputLocation(){
         inputLocation(Data.locationReg);
     }
-    public void inputLocation(String city){ // Tampa, FL, US
-        inputLocationXpath().click();
+    public void inputLocation(String city){ // Tampa
         try {explicitWait.until(ExpectedConditions.attributeToBeNotEmpty(inputLocationXpath(),"title"));
             inputLocationXpath().click();
             driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
