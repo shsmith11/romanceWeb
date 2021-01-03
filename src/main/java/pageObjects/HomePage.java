@@ -16,6 +16,7 @@ public class HomePage extends BasePage{
     public WebElement iFrameVideoYoutube (){return driver.findElement(By.xpath(Locators.iFrameVideoYoutube));}
     //public WebElement iFrameVideoYoutubeUnstarted (){return driver.findElement(By.xpath(Locators.iFrameVideoYoutubeUnstarted));}
     public WebElement iFrameVideoYoutubePlaying (){return driver.findElement(By.xpath(Locators.iFrameVideoYoutubePlaying));}
+    public By TEXT_SECTION = By.xpath(Locators.textSection);
     public WebElement buttonIFrameVideoYoutube (){return driver.findElement(By.xpath(Locators.buttonIFrameVideoYoutube));}
     public WebElement textSection (){return driver.findElement(By.xpath(Locators.textSection));}
 
@@ -34,14 +35,15 @@ public class HomePage extends BasePage{
     }
 
     public boolean isClickable(){
-        explicitWait.until(ExpectedConditions.elementToBeClickable(iFrameVideoYoutube()));
+        fluentWait.until(x -> x.findElement(TEXT_SECTION).isDisplayed());
         Helpers.ajaxScrollDown(iFrameVideoYoutube());
         action.moveToElement(iFrameVideoYoutube()).perform();
         driver.switchTo().frame(iFrameVideoYoutube());
         return buttonIFrameVideoYoutube().isEnabled();
     }
     public void clickablePlayButtonCheck() {
-        explicitWait.until(ExpectedConditions.elementToBeClickable(iFrameVideoYoutube()));
+        fluentWait.until(x -> x.findElement(TEXT_SECTION).isDisplayed());
+        Helpers.ajaxScrollDown(iFrameVideoYoutube());
         action.moveToElement(iFrameVideoYoutube()).perform();
         driver.switchTo().frame(iFrameVideoYoutube());
         action.moveToElement(buttonIFrameVideoYoutube()).click().perform();

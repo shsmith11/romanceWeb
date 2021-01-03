@@ -2,6 +2,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -59,10 +60,13 @@ public class BaseTest {
         }
         else if (browser.equalsIgnoreCase("chrome")){
             System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            //options.addArguments("--headless");
+            options.addArguments("--disable-geolocation");
+            driver = new ChromeDriver(options);
             driver.get("chrome://settings/clearBrowserData");
-            Thread.sleep(3000);
-            driver.switchTo().activeElement();
+            //Thread.sleep(3000);
+            //driver.switchTo().activeElement();
             //driver.findElement(By.cssSelector("* /deep/ #clearBrowsingDataConfirm")).click();
         }
         else if (browser.equalsIgnoreCase("edge")){
@@ -77,10 +81,9 @@ public class BaseTest {
         }
         else if (browser.equalsIgnoreCase("opera")){
             System.setProperty("webdriver.opera.driver", "operadriver.exe");
-
             OperaOptions options = new OperaOptions();
             options.addArguments("--disable-notifications");
-
+            options.addArguments("--disable-notifications");
             driver = new OperaDriver(options);
             driver.manage().deleteAllCookies();
         }

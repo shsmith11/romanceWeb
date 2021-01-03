@@ -14,7 +14,7 @@ public class PrettyWomanPage extends BasePage {
     public WebElement dropDownMinAge (){return driver.findElement(By.xpath(Locators.dropDownMinAge));}
     public WebElement dropDownMaxAge (){return driver.findElement(By.xpath(Locators.dropDownMaxAge));}
     public WebElement buttonSearch(){return driver.findElement(By.xpath(Locators.buttonSearch));}
-    public WebElement textPeopleFoundOnPage () {return driver.findElement(By.xpath(Locators.textPeopleFoundOnPage));}
+    public By BLOCK_MIN_MAX = By.xpath(Locators.blockMinMaxAge);
     public WebElement imageBlock() { return driver.findElement(By.xpath(Locators.imageBlock));}
 
     Select selectMinAge;
@@ -37,10 +37,12 @@ public class PrettyWomanPage extends BasePage {
 
     }
     public String pageTitleExpected(){
+        fluentWait.until(x -> x.findElement(BLOCK_MIN_MAX).isDisplayed());
         return "Meet single Ukrainian women online: dating and marriage at Marry Ukrainian Lady";
     }
 
     public void setMinMaxAgeSelect(int min, int max){
+        fluentWait.until(x -> x.findElement(BLOCK_MIN_MAX).isDisplayed());
         selectMinAge().selectByValue(Helpers.toString(min));
         selectMaxAge().selectByValue(Helpers.toString(max));
     }

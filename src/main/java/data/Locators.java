@@ -29,19 +29,20 @@ final public class Locators {
     public static String iFrameVideoYoutubePlaying ="//div[contains(@class,'playing-mode')]";
     public static String iFrameVideoYoutubePaused ="//div[contains(@class,'paused-mode')]";
 
-    //Home page pop up Sign form page 1 locators
+    //Home page pop up Registration form page 1 locators
     public static String inputSignUpFormLoginXpath = "//input[@id='email']";
     public static String inputSignUpFormPassXpath = "//input[@id='password']";
     public static String buttonNextSignUpFormXpath = "//button[@data-action='next-page'][text()='Next']";
-    //Home page pop up Sign form page 2 locators
+    //Home page pop up Registration form page 2 locators
     public static String inputSignUpFormUserNameXpath = "//input[@id='nickname']";
-    public static String dropDownOpenedSignUpFormDayXpath = "//ul[@class='dropdown-menu show']//li[@data-value="+ Data.dayReg +"]";  //1 .. 30
-    public static String dropDownOpenedSignUpFormMonthXpath = "//ul[@class='dropdown-menu show']//li[@data-type="+ Data.monthReg +"]"; //0 .. 11
-    public static String dropDownOpenedSignUpFormYearXpath = "//ul[@class='dropdown-menu show']//li[@data-value="+ Data.yearReg +"]"; //1940 .. 2002
+    public static String dropDownOpenedSignUpFormDayXpath = "//div[@id='daySelect']//li";
+    public static String dropDownOpenedSignUpFormMonthXpath = "//div[@id='monthSelect']//li";
+    public static String dropDownOpenedSignUpFormYearXpath = "//div[@id='yearSelect']//li";
     public static String dropDownSignUpFormDayXpath = "//div[@id='daySelect']";
     public static String dropDownSignUpFormMonthXpath = "//div[@id='monthSelect']";
     public static String dropDownSignUpFormYearXpath = "//div[@id='yearSelect']";
-    public static String inputPhoneXpath = "//input[@name='data[phone]']";
+    public static String inputPhoneRegXpath = "//input[@name='phone']";
+    public static String inputPhonePopUpRegXpath = "//input[@name='data[phone]']";
     public static String inputLocationXpath = "//input[@name='region_name']";
     public static String inputLocationEnteredCityXpath = "//ul//li[@city='356107']";   // city Tampa,fl,US. need .sendkey "tampa"
     public static String checkboxXpath = "//input[@type='checkbox'][@name='data[confirmation]']";
@@ -70,6 +71,7 @@ final public class Locators {
     // PRETTY WOMAN page data.Locators
     public static String dropDownMinAge = "//select[@id='age_min']";
     public static String dropDownMaxAge = "//select[@id='age_max']";
+    public static String blockMinMaxAge ="//div[@class='search-form']";
     public static String textPeopleFoundOnPageNoFound = "//h2[@class='text-center p10']";
     public static String textPeopleFoundOnPage ="//div[@class='lh30']";
     public static String buttonSearch = "//input[@id='main_search_button_user_advanced']";
@@ -84,6 +86,8 @@ final public class Locators {
 
     //BLOG page locators
     public static String headerMenuOuterContainer = "//div[@class='header-container-outer' and @id='slidemenu-outer']";
+    public static String articlesMenuList = "//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li/div/a/div/div";
+    //public static String articlesMenuList_up = "//div[@class='inside account_menu']";
 
     public static String hrefBlogListItem = "div[@class='info-content-block wysiwyg']/ul/li/a[@href='/content/view/beautiful-urkainian-girls']";
     public static String hrefBlogList = "//div[@class='info-content-block wysiwyg']/ul"; // for array use

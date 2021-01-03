@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 final public class Data {
 
+    public static String[] months = {"Jan","Feb","Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov","Dec"};
+
     // login Data
 
     public static String emailLogin="sh11usertest";
@@ -18,7 +20,7 @@ final public class Data {
     public static String passReg = Helpers.randomPassword();
     public static String userReg = Helpers.randomUserString();
     public static String dayReg = Helpers.toString(Helpers.randomInt(1,30));
-    public static String monthReg = Helpers.toString(Helpers.randomInt(0,11));
+    public static String monthReg = Data.months[Helpers.randomArrArg(Data.months)];
     public static String yearReg = Helpers.toString(Helpers.randomInt(1940,Helpers.getCurrentYear()-18));
 
     //Search Data
@@ -28,6 +30,8 @@ final public class Data {
     //Expected Nav Menu Data
     public static HashMap<Enum,String> expectedH1 = new HashMap<>();
     public static HashMap<Enum,String> expectedTitles = new HashMap<>();
+
+
 
     public static HashMap<Enum,String> getExpectedTitles() {
         // key: menu item, value: title

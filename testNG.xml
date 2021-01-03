@@ -1,24 +1,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TestSuite" parallel="none" >
+<suite name="TestSuite" parallel="classes" thread-count="1" verbose="1" >
 
-    <test name="HomeTest" enabled="true">
-        <parameter name="browser" value="ie"/>
-        <groups>
-            <run>
-                <exclude name="ie"/>
-                <include name="admin"/>
-                <include name="user"/>
-            </run>
-        </groups>
-
-        <classes>
-            <class name ="RegistrationTest"/>
-        </classes>
-    </test>
 
     <test name="IETestCases" enabled="false">
         <parameter name="browser" value="ie"/>
+        <parameter name="email" value="sh11user-test@gmail.com" />
+        <parameter name="password" value="te$t$tudent02" />
+        <groups>
+            <run>
+                <include name="ie"/>
+            </run>
+        </groups>
         <classes>
             <class name ="RegistrationTest"/>
         </classes>
@@ -26,30 +19,211 @@
 
     <test name="FirefoxTestCases" enabled="true">
         <parameter name="browser" value="firefox"/>
+
         <classes>
-            <class name ="RegistrationTest"/>
+            <class name="ContactUsTests">
+                <parameter name="email" value="sh11user-test@gmail.com" />
+                <parameter name="password" value="te$t$tudent02" />
+                <methods>
+                    <include name="ContactAdminPageEnteredDataVerification"/>
+                    <exclude name="ContactAdminPageErrorMsgVerification"/>
+                </methods>
+            </class>
+            <class name ="RegistrationTest">
+                <methods>
+                    <include name="signUpDataValidationPopUpHome"/>
+                    <include name="signUpDataValidationRegistrationPage"/>
+                </methods>
+            </class>
+            <class name="HomeTest">
+                <methods>
+                    <include name="isHomePage"/>
+                    <include name="iFrameButtonTest"/>
+                    <include name="iFrameButtonTestAction"/>
+                    <exclude name="navMenuOpenLinksCheck"/>
+                    <include name="justFaiTest"/>
+                    <include name="wordCountExample"/>
+                </methods>
+            </class>
+            <class name="PrettyWomanTests">
+                <methods>
+                    <include name="isPrettyWomanPage"/>
+                    <include name="checkSearchButtonResult"/>
+                </methods>
+            </class>
+            <class name="HowWeWorkTests">
+                <methods>
+                    <include name="isHowWeWorkPage"/>
+                </methods>
+            </class>
+            <class name="LogInTests">
+                <methods>
+                    <include name="signInIncorrectErrorShowsUp"/>
+                </methods>
+            </class>
+            <class name="PhotosTests">
+                <methods>
+                    <include name="isPhotoPage"/>
+                    <include name="isPicturesLoaded"/>
+                </methods>
+            </class>
         </classes>
 
     </test>
 
-    <test name="ChromeTestCases" enabled="false">
+    <test name="ChromeTestCases" enabled="true">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name ="RegistrationTest"/>
+            <class name="ContactUsTests">
+                <parameter name="email" value="sh11user-test@gmail.com" />
+                <parameter name="password" value="te$t$tudent02" />
+                <methods>
+                    <include name="ContactAdminPageEnteredDataVerification"/>
+                    <exclude name="ContactAdminPageErrorMsgVerification"/>
+                </methods>
+            </class>
+            <class name ="RegistrationTest">
+                <methods>
+                    <include name="signUpDataValidationPopUpHome"/>
+                    <include name="signUpDataValidationRegistrationPage"/>
+                </methods>
+            </class>
+            <class name="HomeTest">
+                <methods>
+                    <include name="isHomePage"/>
+                    <include name="iFrameButtonTest"/>
+                    <include name="iFrameButtonTestAction"/>
+                    <exclude name="navMenuOpenLinksCheck"/>
+                    <include name="justFaiTest"/>
+                    <include name="wordCountExample"/>
+                </methods>
+            </class>
+            <class name="PrettyWomanTests">
+                <methods>
+                    <include name="isPrettyWomanPage"/>
+                    <include name="checkSearchButtonResult"/>
+                </methods>
+            </class>
+            <class name="HowWeWorkTests">
+                <methods>
+                    <include name="isHowWeWorkPage"/>
+                </methods>
+            </class>
+            <class name="LogInTests">
+                <methods>
+                    <include name="signInIncorrectErrorShowsUp"/>
+                </methods>
+            </class>
+            <class name="PhotosTests">
+                <methods>
+                    <include name="isPhotoPage"/>
+                    <include name="isPicturesLoaded"/>
+                </methods>
+            </class>
         </classes>
     </test>
 
-    <test name="EdgeTestCases" enabled="false">
+    <test name="EdgeTestCases" enabled="true">
         <parameter name="browser" value="edge"/>
         <classes>
-            <class name ="RegistrationTest"/>
+            <class name="ContactUsTests">
+                <parameter name="email" value="sh11user-test@gmail.com" />
+                <parameter name="password" value="te$t$tudent02" />
+                <methods>
+                    <include name="ContactAdminPageEnteredDataVerification"/>
+                    <exclude name="ContactAdminPageErrorMsgVerification"/>
+                </methods>
+            </class>
+            <class name ="RegistrationTest">
+                <methods>
+                    <include name="signUpDataValidationPopUpHome"/>
+                    <include name="signUpDataValidationRegistrationPage"/>
+                </methods>
+            </class>
+            <class name="HomeTest">
+                <methods>
+                    <include name="isHomePage"/>
+                    <include name="iFrameButtonTest"/>
+                    <include name="iFrameButtonTestAction"/>
+                    <include name="navMenuOpenLinksCheck"/>
+                    <include name="justFaiTest"/>
+                    <include name="wordCountExample"/>
+                </methods>
+            </class>
+            <class name="PrettyWomanTests">
+                <methods>
+                    <include name="isPrettyWomanPage"/>
+                    <include name="checkSearchButtonResult"/>
+                </methods>
+            </class>
+            <class name="HowWeWorkTests">
+                <methods>
+                    <include name="isHowWeWorkPage"/>
+                </methods>
+            </class>
+            <class name="LogInTests">
+                <methods>
+                    <include name="signInIncorrectErrorShowsUp"/>
+                </methods>
+            </class>
+            <class name="PhotosTests">
+                <methods>
+                    <include name="isPhotoPage"/>
+                    <include name="isPicturesLoaded"/>
+                </methods>
+            </class>
         </classes>
     </test>
 
     <test name="OperaTestCases" enabled="true">
         <parameter name="browser" value="opera"/>
         <classes>
-            <class name ="RegistrationTest"/>
+            <class name="ContactUsTests">
+                <parameter name="email" value="sh11user-test@gmail.com" />
+                <parameter name="password" value="te$t$tudent02" />
+                <methods>
+                    <include name="ContactAdminPageEnteredDataVerification"/>
+                    <exclude name="ContactAdminPageErrorMsgVerification"/>
+                </methods>
+            </class>
+            <class name ="RegistrationTest">
+                <methods>
+                    <include name="signUpDataValidationPopUpHome"/>
+                    <include name="signUpDataValidationRegistrationPage"/>
+                </methods>
+            </class>
+            <class name="HomeTest">
+                <methods>
+                    <include name="isHomePage"/>
+                    <include name="iFrameButtonTest"/>
+                    <include name="iFrameButtonTestAction"/>
+                    <include name="navMenuOpenLinksCheck"/>
+                    <include name="justFaiTest"/>
+                    <include name="wordCountExample"/>
+                </methods>
+            </class>
+            <class name="PrettyWomanTests">
+                <methods>
+                    <include name="isPrettyWomanPage"/>
+                    <include name="checkSearchButtonResult"/>
+                </methods>
+            </class>
+            <class name="HowWeWorkTests">
+                <methods>
+                    <include name="isHowWeWorkPage"/>
+                </methods>
+            </class>
+            <class name="LogInTests">
+                <methods>
+                    <include name="signInIncorrectErrorShowsUp"/>
+                </methods>
+            </class>
+            <class name="PhotosTests">
+                <methods>
+                    <include name="isPhotoPage"/>
+                    <include name="isPicturesLoaded"/>
+                </methods>
+            </class>
         </classes>
     </test>
 

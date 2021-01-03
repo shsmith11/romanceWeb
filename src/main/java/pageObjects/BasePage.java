@@ -1,8 +1,5 @@
 package pageObjects;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,11 +19,12 @@ public class BasePage {
         this.driver = driver;
         this.explicitWait = new WebDriverWait(driver, 10);
         this.fluentWait = new FluentWait<>(this.driver)
-                .withTimeout(Duration.ofSeconds(3))
+                .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofMillis(80))
                 .ignoring(ElementClickInterceptedException.class)
-                .ignoring(StaleElementReferenceException.class);
-                //.ignoring(NoSuchElementException.class);
+                .ignoring(StaleElementReferenceException.class)
+                .ignoring(TimeoutException.class)
+                .ignoring(NoSuchElementException.class);
         action = new Actions(this.driver);
         }
 

@@ -10,8 +10,8 @@ public class HomeTest extends BaseTest {
     public static final boolean testCase1 = true;
     public static final boolean testCase2 = true;
     public static final boolean testCase3 = true;
-    public static final boolean testCase4 = true;
-    public static final boolean testCase5 = true;
+    public static final boolean testCase4 = false;
+    public static final boolean testCase5 = false;
     public static final boolean testCase6 = true;
 
     @Test (priority = 2, enabled = testCase1, groups = {"ie"})
@@ -19,12 +19,12 @@ public class HomeTest extends BaseTest {
         homePage.openPage(PagesLinks.mainUrl);
         Assert.assertTrue(homePage.isHome());
     }
-    @Test (priority = 2, enabled = testCase2, groups = {"ie", "user", "admin"})
+    @Test (priority = 2, enabled = testCase2, groups = {"user", "admin"})
     public void iFrameButtonTest(){
         homePage.openPage(PagesLinks.mainUrl);
         Assert.assertTrue(homePage.isClickable());
     }
-    @Test (priority = 2, enabled = testCase3, groups = {"ie", "user", "admin"})
+    @Test (priority = 2, enabled = testCase3, groups = {"user", "admin"})
     public void iFrameButtonTestAction(){
         homePage.openPage(PagesLinks.mainUrl);
         homePage.clickablePlayButtonCheck();

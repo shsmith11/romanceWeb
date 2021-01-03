@@ -22,6 +22,11 @@ public class Helpers extends BasePage {
         Random rand = new Random();
         return rand.nextInt(end-begin)+begin;
     }
+    static public int randomArrArg(String[] arr){
+        Random rand = new Random();
+        return rand.nextInt(arr.length-1);
+    }
+
 
     public static String randomUserString(){
         int length = 5;
@@ -63,8 +68,8 @@ public class Helpers extends BasePage {
     }
 
 
-    public static String toString(int randomInt) {
-        return Integer.toString(randomInt);
+    public static String toString(int arg) {
+        return Integer.toString(arg);
     }
     public static int getCurrentDay(){
         Date today = new Date();

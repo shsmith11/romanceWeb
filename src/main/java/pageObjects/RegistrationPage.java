@@ -1,14 +1,13 @@
 package pageObjects;
 
 import data.Data;
+import data.Helpers;
 import data.Locators;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class RegistrationPage extends BasePage{
@@ -21,6 +20,7 @@ public class RegistrationPage extends BasePage{
     }
     // 1 page
     public WebElement buttonJoinForFree (){return driver.findElement(By.xpath(Locators.buttonJoinForFree));}
+    public By BY_BUTTON_JOIN_FOR_FREE = By.xpath(Locators.buttonJoinForFree);
     public WebElement inputSignUpFormLoginXpath (){return driver.findElement(By.xpath(Locators.inputSignUpFormLoginXpath));}
     public WebElement inputSignUpFormPassXpath (){return driver.findElement(By.xpath(Locators.inputSignUpFormPassXpath));}
     public WebElement buttonNextSignUpFormXpath () {return driver.findElement(By.xpath(Locators.buttonNextSignUpFormXpath));}
@@ -29,13 +29,17 @@ public class RegistrationPage extends BasePage{
     public WebElement dropDownSignUpFormDayXpath (){return driver.findElement(By.xpath(Locators.dropDownSignUpFormDayXpath));}
     public WebElement dropDownSignUpFormMonthXpath (){return driver.findElement(By.xpath(Locators.dropDownSignUpFormMonthXpath));}
     public WebElement dropDownSignUpFormYearXpath (){return driver.findElement(By.xpath(Locators.dropDownSignUpFormYearXpath));}
-    public WebElement dropDownOpenedSignUpFormDayXpath (){return driver.findElement(By.xpath(Locators.dropDownOpenedSignUpFormDayXpath));}
-    public WebElement dropDownOpenedSignUpFormMonthXpath (){return driver.findElement(By.xpath(Locators.dropDownOpenedSignUpFormMonthXpath));}
-    public WebElement dropDownOpenedSignUpFormYearXpath (){return driver.findElement(By.xpath(Locators.dropDownOpenedSignUpFormYearXpath));}
+    public List<WebElement> dropDownOpenedSignUpFormDayXpath (){return driver.findElements(By.xpath(Locators.dropDownOpenedSignUpFormDayXpath));}
+    public List<WebElement> dropDownOpenedSignUpFormMonthXpath (){return driver.findElements(By.xpath(Locators.dropDownOpenedSignUpFormMonthXpath));}
+    public List<WebElement> dropDownOpenedSignUpFormYearXpath (){return driver.findElements(By.xpath(Locators.dropDownOpenedSignUpFormYearXpath));}
 
-    public WebElement inputPhoneXpath () {return driver.findElement(By.xpath(Locators.inputPhoneXpath));}
+    public WebElement inputPhoneRegXpath () {return driver.findElement(By.xpath(Locators.inputPhoneRegXpath));}
+    public WebElement inputPhonePopUpRegXpath () {return driver.findElement(By.xpath(Locators.inputPhonePopUpRegXpath));}
     public WebElement inputLocationXpath() { return driver.findElement(By.xpath(Locators.inputLocationXpath));}
+    public By INPUT_LOCATION_ = By.xpath(Locators.inputLocationXpath);
     public WebElement inputLocationEnteredCityXpath (){return driver.findElement(By.xpath(Locators.inputLocationEnteredCityXpath));}
+    public By INPUT_LOCATION_ENTERED_CITY = By.xpath(Locators.inputLocationEnteredCityXpath);
+
     public WebElement checkBoxSignUp (){return driver.findElement(Locators.CHECKBOX_SIGNUP_FORM_XPATH);}
 
     //Registration Page
@@ -58,47 +62,85 @@ public class RegistrationPage extends BasePage{
 
 
     public void openFormPopUpFromHome(){
+        fluentWait.until(x -> x.findElement(BY_BUTTON_JOIN_FOR_FREE).isDisplayed());
         buttonJoinForFree().click();
     }
-//    public void inputEmail(String email,WebElement inputEmail){
-//        inputEmail.sendKeys(email);
-//    }
-//    public void inputPass(String pass,WebElement inputPass){
-//        inputPass.sendKeys(pass);
-//    }
-//    public void inputUser(String user, WebElement inputUser){
-//        inputUser.sendKeys(user);
-//    }
 
     public void inputSelectDateOnForm(){
+        inputSelectDateOnForm(Data.dayReg, Data.monthReg, Data.yearReg);
+    }
+    public void inputSelectDateOnForm(String day, String month, String year){
         explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locators.dropDownSignUpFormYearXpath)));
         dropDownSignUpFormDayXpath().click();
-        dropDownOpenedSignUpFormDayXpath().click();
+        dateMatchingCheck(dropDownOpenedSignUpFormDayXpath(), day, "days");
         dropDownSignUpFormMonthXpath().click();
-        dropDownOpenedSignUpFormMonthXpath().click();
+        dateMatchingCheck(dropDownOpenedSignUpFormMonthXpath(), month, "months");
         dropDownSignUpFormYearXpath().click();
-        dropDownOpenedSignUpFormYearXpath().click();
+        dateMatchingCheck(dropDownOpenedSignUpFormYearXpath(), year, "years");
+
+    }
+    public void dateMatchingCheck(List<WebElement> dateList, String date, String dateType){
+        for (int i = 0; i < dateList.size(); i++) {
+            if (dateList.get(i).getText().contains(date)){
+                System.out.println(dateType+" matched - "+date+" = "+dateList.get(i).getText());
+                dateList.get(i).click();
+                break;
+            }
+            System.out.println(dateType+" doesn't match. Provided: "+ date+ ". list argument is " + dateList.get(i).getText());
+        }
     }
     public void selectDateOnReg(){
+        selectDateOnReg(Data.dayReg, Data.monthReg, Data.yearReg);
+    }
+    public void selectDateOnReg(String day, String month, String year){
         selectRegistrationFormDay = new Select(selectRegFormDayXpath());
         selectRegistrationFormMonth = new Select(selectRegFormMonthXpath());
         selectRegistrationFormYear = new Select(selectRegFormYearXpath());
-        selectRegistrationFormDay.selectByValue(Data.dayReg);
-        selectRegistrationFormMonth.selectByValue(Data.monthReg);
-        selectRegistrationFormYear.selectByValue(Data.yearReg);
+        selectRegistrationFormDay.selectByVisibleText(day);
+        selectRegistrationFormMonth.selectByVisibleText(month);
+        selectRegistrationFormYear.selectByVisibleText(year);
+    }
+    public void inputEmail(WebElement emailInput){
+        inputEmail(Data.emailReg, emailInput);
+    }
+    public void inputEmail(String email, WebElement emailInput){
+        Helpers.inputEmail(email, emailInput);
+    }
+    public void inputPass(WebElement passInput){
+        inputPass(Data.passReg, passInput);
+    }
+    public void inputPass(String pass, WebElement passInput){
+        Helpers.inputEmail(pass, passInput);
+    }
+    public void inputUser(WebElement userInput){
+        inputUser(Data.userReg, userInput);
+    }
+    public void inputUser(String user, WebElement userInput){
+        Helpers.inputEmail(user, userInput);
+    }
+    public void inputPhone(WebElement inputPhone){
+        inputPhone(Data.phoneReg, inputPhone);
     }
     public void inputPhone(String phone, WebElement inputPhone){
         inputPhone.sendKeys(phone);
     }
-    public void inputLocation(){ // Tampa, FL, US
-        //driver.switchTo().alert().dismiss();
-        explicitWait.until(ExpectedConditions.attributeToBeNotEmpty(inputLocationXpath(),"title"));
+
+    public void inputLocation(){
+        inputLocation(Data.locationReg);
+    }
+    public void inputLocation(String city){ // Tampa, FL, US
         inputLocationXpath().click();
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-        inputLocationXpath().sendKeys(Keys.CONTROL+ "A");
-        inputLocationXpath().sendKeys(Keys.BACK_SPACE);
-        inputLocationXpath().sendKeys(Data.locationReg);
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        try {explicitWait.until(ExpectedConditions.attributeToBeNotEmpty(inputLocationXpath(),"title"));
+            inputLocationXpath().click();
+            driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+            inputLocationXpath().sendKeys(Keys.CONTROL+ "A");
+            inputLocationXpath().sendKeys(Keys.BACK_SPACE);
+        }
+        catch (TimeoutException err) {
+            inputLocationXpath().click();
+        }
+        inputLocationXpath().sendKeys(city);
+        fluentWait.until(x -> x.findElement(INPUT_LOCATION_ENTERED_CITY).isDisplayed());
         inputLocationEnteredCityXpath().click();
     }
     public void inputCheckBox(WebElement checkBox){
