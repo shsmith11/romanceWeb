@@ -47,6 +47,7 @@ public class RegistrationPage extends BasePage{
     public WebElement inputRegFormEmailXpath (){return driver.findElement(By.xpath(Locators.inputRegFormEmailXpath));}
     public WebElement inputRegFormUserNameXpath (){return driver.findElement(By.xpath(Locators.inputRegFormUserNameXpath));}
     public WebElement inputRegFormPassXpath (){return driver.findElement(By.xpath(Locators.inputRegFormPassXpath));}
+    public WebElement errorTooltipNextSignUpFormXpath (){return driver.findElement(By.xpath(Locators.errorTooltipNextSignUpFormXpath));}
 
     public WebElement selectRegFormDayXpath (){return driver.findElement(By.xpath(Locators.selectRegFormDayXpath));}
     public WebElement selectRegFormMonthXpath (){return driver.findElement(By.xpath(Locators.selectRegFormMonthXpath));}

@@ -18,7 +18,7 @@ public class LoginPage extends BasePage {
     }
 
 
-    public boolean signInIncorrect(){
+    public boolean negativeSignInIncorrect(){
         explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locators.buttonLOgIn)));
         inputEmail().sendKeys(Data.emailLogin);
         inputPass().sendKeys(Data.passLogin);
@@ -29,3 +29,4 @@ public class LoginPage extends BasePage {
 
 
 }
+

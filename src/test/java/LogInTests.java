@@ -8,6 +8,6 @@ public class LogInTests extends BaseTest{
     @Test
     public void signInIncorrectErrorShowsUp(){
         loginPage.openPage(PagesLinks.logInUrl);
-        Assert.assertTrue(loginPage.signInIncorrect());
+        Assert.assertTrue(loginPage.negativeSignInIncorrect());
     }
 }

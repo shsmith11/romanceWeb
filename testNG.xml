@@ -17,7 +17,7 @@
         </classes>
     </test>
 
-    <test name="FirefoxTestCases" enabled="true">
+    <test name="FirefoxTestCases" enabled="false">
         <parameter name="browser" value="firefox"/>
 
         <classes>
@@ -71,7 +71,19 @@
 
     </test>
 
-    <test name="ChromeTestCases" enabled="true">
+    <test name="ChromeTestCasesRegistration" enabled="true">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name ="RegistrationTest">
+                <methods>
+                    <include name="signUpDataValidationPopUpHome"/>
+                    <include name="signUpDataValidationRegistrationPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="ChromeTestCases" enabled="false">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="ContactUsTests">
@@ -123,7 +135,7 @@
         </classes>
     </test>
 
-    <test name="EdgeTestCases" enabled="true">
+    <test name="EdgeTestCases" enabled="false">
         <parameter name="browser" value="edge"/>
         <classes>
             <class name="ContactUsTests">
@@ -175,7 +187,7 @@
         </classes>
     </test>
 
-    <test name="OperaTestCases" enabled="true">
+    <test name="OperaTestCases" enabled="false">
         <parameter name="browser" value="opera"/>
         <classes>
             <class name="ContactUsTests">

@@ -33,6 +33,8 @@ final public class Locators {
     public static String inputSignUpFormLoginXpath = "//input[@id='email']";
     public static String inputSignUpFormPassXpath = "//input[@id='password']";
     public static String buttonNextSignUpFormXpath = "//button[@data-action='next-page'][text()='Next']";
+    public static String errorTooltipNextSignUpFormXpath = "//div[@class='tooltip']";
+
     //Home page pop up Registration form page 2 locators
     public static String inputSignUpFormUserNameXpath = "//input[@id='nickname']";
     public static String dropDownOpenedSignUpFormDayXpath = "//div[@id='daySelect']//li";

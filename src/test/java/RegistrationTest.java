@@ -1,3 +1,4 @@
+import com.tngtech.java.junit.dataprovider.DataProviders;
 import data.Data;
 import data.*;
 import org.testng.Assert;
@@ -10,6 +11,15 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class RegistrationTest extends BaseTest{
+
+    @DataProvider(name = "Registration2")
+    public static Object[][] testRegistration2(){
+        return new Object[][]{
+                {Data.emailReg, Data.userReg, true},
+                {"email_bad",  Data.userReg, false},
+                {Data.emailReg , Data.userReg, true},
+        };
+    }
 
     @DataProvider(name = "RegistrationEmailsOnly")
     public static Object[][] testRegistrationEmails() throws Exception{
@@ -30,37 +40,43 @@ public class RegistrationTest extends BaseTest{
         return out.toArray(new Object[out.size()][]);
     }
 
-    @Test (dataProvider = "Registration")        // sign up through "JOIN FOR FREE NOW" button at home page with POPUP frames
-    public void signUpDataValidationPopUpHome(String email,String pass,String user,String day,String month,String year,String phone, String location) {
+    @Test (dataProvider = "Registration2")        // sign up through "JOIN FOR FREE NOW" button at home page with POPUP frames
+    public void signUpDataValidationPopUpHome(String email, String user, boolean requirement) {
         userRegistrationPage.openPage(PagesLinks.mainUrl);
         userRegistrationPage.openFormPopUpFromHome();
         //1page
-        userRegistrationPage.inputEmail(email, userRegistrationPage.inputSignUpFormLoginXpath()); //Random email
-        userRegistrationPage.inputPass(pass, userRegistrationPage.inputSignUpFormPassXpath()); //Random pass
-        userRegistrationPage.buttonNextSignUpFormXpath().click();
-        softAssert.assertTrue(userRegistrationPage.checkBoxSignUp().isDisplayed(), "First page is not passed");
-        //2page
-        userRegistrationPage.inputUser(user, userRegistrationPage.inputSignUpFormUserNameXpath()); //Random user
-        userRegistrationPage.inputSelectDateOnForm(day, month, year);
-        userRegistrationPage.inputPhone(phone, userRegistrationPage.inputPhonePopUpRegXpath()); //Change in Data class if need.
-        userRegistrationPage.inputCheckBox(userRegistrationPage.checkBoxSignUp());
-        userRegistrationPage.inputLocation(location); // Entered Tampa, FL, US. Change in Data class if need.
 
-        Assert.assertTrue(userRegistrationPage.checkBoxSignUp().isSelected(), "Tried check checkbox selected");
+        userRegistrationPage.inputEmail(email, userRegistrationPage.inputSignUpFormLoginXpath()); //Random email
+        userRegistrationPage.inputPass(userRegistrationPage.inputSignUpFormPassXpath()); //Random pass
+        if (!requirement) {
+            Assert.assertTrue(userRegistrationPage.errorTooltipNextSignUpFormXpath().isDisplayed());
+            System.out.println("Negative test passed. Error tooltip occurred");
+        } else {
+            userRegistrationPage.buttonNextSignUpFormXpath().click();
+            softAssert.assertTrue(userRegistrationPage.checkBoxSignUp().isDisplayed(), "First page is not passed");
+            //2page
+            userRegistrationPage.inputUser(user, userRegistrationPage.inputSignUpFormUserNameXpath()); //Random user
+            userRegistrationPage.inputSelectDateOnForm();
+            userRegistrationPage.inputPhone(userRegistrationPage.inputPhonePopUpRegXpath()); //Change in Data class if need.
+            userRegistrationPage.inputCheckBox(userRegistrationPage.checkBoxSignUp());
+            userRegistrationPage.inputLocation(); // Entered Tampa, FL, US. Change in Data class if need.
+
+            Assert.assertTrue(userRegistrationPage.checkBoxSignUp().isSelected(), "Tried check checkbox selected");
+        }
     }
 
-    @Test (dataProvider = "RegistrationEmailsOnly")        // sign up through "Registration page"
-    public void signUpDataValidationRegistrationPage(String email){
+    @Test (dataProvider = "Registration", dataProviderClass = DataProviders.class)        // sign up through "Registration page"
+    public void signUpDataValidationRegistrationPage(String email,String pass,String user,String day,String month,String year,String phone, String location){
         userRegistrationPage.openPage(PagesLinks.registrationUserPage);
         userRegistrationPage.inputEmail(email, userRegistrationPage.inputRegFormEmailXpath()); //Random email
-        userRegistrationPage.inputPass(userRegistrationPage.inputRegFormPassXpath()); //Random pass
-        userRegistrationPage.inputUser(userRegistrationPage.inputRegFormUserNameXpath());
+        userRegistrationPage.inputPass(pass,userRegistrationPage.inputRegFormPassXpath()); //Random pass
+        userRegistrationPage.inputUser(user,userRegistrationPage.inputRegFormUserNameXpath());
         //date
-        userRegistrationPage.inputPhone(userRegistrationPage.inputPhoneRegXpath()); //Change in Data class if need.
-        userRegistrationPage.selectDateOnReg(); // Random date.  Change in Data class if need.
+        userRegistrationPage.inputPhone(phone, userRegistrationPage.inputPhoneRegXpath()); //Change in Data class if need.
+        userRegistrationPage.selectDateOnReg(day, month, year); // Random date.  Change in Data class if need.
         userRegistrationPage.inputCheckBox(userRegistrationPage.checkBoxRegFormNewsXpath());
         userRegistrationPage.inputCheckBox(userRegistrationPage.checkBoxRegFormConfirmXpath());
-        userRegistrationPage.inputLocation(); // Entered Tampa, FL, US. Change in Data class if need.
+        userRegistrationPage.inputLocation(location); // Entered Tampa, FL, US. Change in Data class if need.
 
         Assert.assertTrue(userRegistrationPage.checkBoxRegFormConfirmXpath().isSelected(), "Checking checkbox has been selected");
     }
