@@ -80,7 +80,4 @@ public class RegistrationTest extends BaseTest{
 
         Assert.assertTrue(userRegistrationPage.checkBoxRegFormConfirmXpath().isSelected(), "Checking checkbox has been selected");
     }
-
-
-
 }
