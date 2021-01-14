@@ -1,10 +1,11 @@
 package models;
 
-public class GetPetAPI {
+public class PetAddResponce {
     public int id;
     public Category category;
     public String name;
     public String[] photoUrls;
-    public Tags[] tags;
-    public String status;
+    public Tags[] petTags;
+    public String petStatus;
+
 }
