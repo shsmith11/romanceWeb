@@ -90,6 +90,8 @@ final public class Locators {
     //BLOG page locators
     public static String headerMenuOuterContainer = "//div[@class='header-container-outer' and @id='slidemenu-outer']";
     public static String articlesMenuList = "//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li/div/a/div/div";
+    public static String articlesOnPageList = "//div//p";
+
     //public static String articlesMenuList_up = "//div[@class='inside account_menu']";
 
     public static String hrefBlogListItem = "div[@class='info-content-block wysiwyg']/ul/li/a[@href='/content/view/beautiful-urkainian-girls']";

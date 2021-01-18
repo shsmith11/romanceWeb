@@ -2,6 +2,23 @@
 
 <suite name="TestSuite" parallel="classes" thread-count="1" verbose="1" >
 
+    <test name="APITests" enabled="true">
+        <groups>
+            <run>
+                <include name="informer"/>
+            </run>
+        </groups>
+        <classes>
+
+            <class name ="APItests.APITestCOVID">
+                <parameter name="country" value="All" />
+                <methods>
+                    <include name="testAPIGetData"/>
+                    <include name="testAPIGetCountryData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
     <test name="IETestCases" enabled="false">
         <parameter name="browser" value="ie"/>
@@ -83,22 +100,22 @@
         </classes>
     </test>
 
-    <test name="ChromeTestCasesContactUs" enabled="true">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="password" value="te$t$tudent02" />
-        <classes>
-            <class name="com.romanceabroad.ui.ContactUsTests">
-                <parameter name="email" value="sh11user-test@gmail.com" />
-                <parameter name="password" value="te$t$tudent02" />
-                <methods>
-                    <include name="ContactAdminPageEnteredDataVerification"/>
-                    <exclude name="ContactAdminPageErrorMsgVerification"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="ChromeTestCasesContactUs" enabled="false">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="password" value="te$t$tudent02" />-->
+<!--        <classes>-->
+<!--            <class name="com.romanceabroad.ui.ContactUsTests">-->
+<!--                <parameter name="email" value="sh11user-test@gmail.com" />-->
+<!--                <parameter name="password" value="te$t$tudent02" />-->
+<!--                <methods>-->
+<!--                    <include name="ContactAdminPageEnteredDataVerification"/>-->
+<!--                    <include name="ContactAdminPageErrorMsgVerification"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="ChromeTestCases" enabled="false">
+    <test name="ChromeTestCases" enabled="true">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.romanceabroad.ui.ContactUsTests">
@@ -106,10 +123,12 @@
                 <parameter name="password" value="te$t$tudent02" />
                 <methods>
                     <include name="ContactAdminPageEnteredDataVerification"/>
-                    <exclude name="ContactAdminPageErrorMsgVerification"/>
+                    <include name="ContactAdminPageErrorMsgVerification"/>
                 </methods>
             </class>
             <class name ="com.romanceabroad.ui.RegistrationTest">
+                <parameter name="email" value="sh11user-test@gmail.com" />
+                <parameter name="password" value="te$t$tudent02" />
                 <methods>
                     <exclude name="signUpDataValidationPopUpHome"/>
                     <exclude name="signUpDataValidationRegistrationPage"/>
@@ -117,34 +136,41 @@
             </class>
             <class name="com.romanceabroad.ui.HomeTest">
                 <methods>
-                    <exclude name="isHomePage"/>
-                    <exclude name="iFrameButtonTest"/>
-                    <exclude name="iFrameButtonTestAction"/>
+                    <include name="isHomePage"/>
+                    <include name="iFrameButtonTest"/>
+                    <include name="iFrameButtonTestAction"/>
                     <exclude name="navMenuOpenLinksCheck"/>
-                    <exclude name="justFaiTest"/>
-                    <exclude name="wordCountExample"/>
+                    <include name="justFaiTest"/>
+                    <include name="wordCountExample"/>
                 </methods>
             </class>
             <class name="com.romanceabroad.ui.PrettyWomanTests">
                 <methods>
-                    <exclude name="isPrettyWomanPage"/>
-                    <exclude name="checkSearchButtonResult"/>
+                    <include name="isPrettyWomanPage"/>
+                    <include name="checkSearchButtonResultAdvanced"/>
+                    <include name="checkSearchButtonResult"/>
                 </methods>
             </class>
             <class name="com.romanceabroad.ui.HowWeWorkTests">
                 <methods>
-                    <exclude name="isHowWeWorkPage"/>
+                    <include name="isHowWeWorkPage"/>
+                </methods>
+            </class>
+            <class name="com.romanceabroad.ui.BlogTests">
+                <methods>
+                    <include name="collectAllArticlesLinksMenu"/>
+                    <include name="checkBlogArticlesMenuItemsNamesAndTitlesAndText"/>
                 </methods>
             </class>
             <class name="com.romanceabroad.ui.LogInTests">
                 <methods>
-                    <exclude name="signInIncorrectErrorShowsUp"/>
+                    <include name="signInIncorrectErrorShowsUp"/>
                 </methods>
             </class>
             <class name="com.romanceabroad.ui.PhotosTests">
                 <methods>
-                    <exclude name="isPhotoPage"/>
-                    <exclude name="isPicturesLoaded"/>
+                    <include name="isPhotoPage"/>
+                    <include name="isPicturesLoaded"/>
                 </methods>
             </class>
         </classes>

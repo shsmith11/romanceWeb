@@ -15,7 +15,7 @@ import static io.restassured.RestAssured.given;
 
 public class APIInformerCovid {
 
-    public static JsonPath getCountryCall(String country){ /* country name or All for all country statistics*/
+    public static Response getCountryCall(String country){ /* country name or All for all country statistics*/
         Response response =
             given()
                 .baseUri("https://covid-193.p.rapidapi.com")
@@ -36,10 +36,10 @@ public class APIInformerCovid {
         System.out.println(response.getStatusCode());
         System.out.println("Date -  "+response.getHeader("Date"));
         JsonPath jsonPath = response.jsonPath();
-        return jsonPath;
+        return response;
     }
 
-    public static JsonPath getAllCountryCall(){
+    public static Response getAllCountryCall(){
         Response response =
             given()
                 .baseUri("https://covid-193.p.rapidapi.com")
@@ -59,15 +59,22 @@ public class APIInformerCovid {
         System.out.println(response.getStatusCode());
         System.out.println("Date -  "+response.getHeader("Date"));
         JsonPath jsonPath = response.jsonPath();
-        return jsonPath;
+        return response;
 
     }
     public static String getStringElementAPI(JsonPath jsonPath){
         String newItemCases;
         return  newItemCases = jsonPath.getString("response.cases.total");
     }
+    public static JsonPath getJsonFromResponce(Response response){
+        JsonPath jsonPath = response.jsonPath();;
+        return  jsonPath;
+    }
+    public static int getServerCodeResponce(Response response){
+        return  response.getStatusCode();
+    }
 
-    public static InformerCovidAPI getFullAPIresponce(JsonPath jsonPath){
+    public static InformerCovidAPI getFullAPIJSONresponce(JsonPath jsonPath){
         return jsonPath.getObject("$", InformerCovidAPI.class);
     }
     public static InformerCovidAllAPI getFullAPIResponceAllCountry(JsonPath jsonPath){

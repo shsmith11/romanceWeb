@@ -62,7 +62,7 @@ public class PrettyWomanPage extends BasePage {
         Helpers.setDropDownListByText(dropDownSorter(), sortMode);
     }
     public void setSortMode(){
-        setSortMode("name");
+        setSortMode("Name");
     }
 
 
