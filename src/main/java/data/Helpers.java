@@ -1,16 +1,15 @@
 package data;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.List;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Random;
+import java.util.*;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import pageObjects.BasePage;
+import com.romanceabroad.ui.BasePage;
 
 public class Helpers extends BasePage {
 
@@ -22,11 +21,10 @@ public class Helpers extends BasePage {
         Random rand = new Random();
         return rand.nextInt(end-begin)+begin;
     }
-    static public int randomArrArg(String[] arr){
+    static public int randomArrArg(String[] arr){  //random int of array length
         Random rand = new Random();
         return rand.nextInt(arr.length-1);
     }
-
 
     public static String randomUserString(){
         int length = 5;
@@ -54,6 +52,18 @@ public class Helpers extends BasePage {
         boolean useNumbers = false;
         return "sh11"+ RandomStringUtils.random(length, useLetters, useNumbers)+"@test.com";
     }
+
+    public static String dropDownSetMinValue(String locator){
+        String minValue = driver.findElements(By.xpath(locator)).get(0).getText();
+        return minValue;
+    }
+
+    public static String dropDownSetMaxValue(String locator){
+        List<WebElement> elementsList=driver.findElements(By.xpath(locator));
+        String maxValue = elementsList.get(elementsList.size()-1).getText();
+        return maxValue;
+    }
+
     public static void inputEmail(String email,WebElement inputEmail){
         inputEmail.sendKeys(email);
     }
@@ -66,8 +76,6 @@ public class Helpers extends BasePage {
     public static void inputTextData(int length, WebElement inputText){
         inputText.sendKeys(randomText(length));
     }
-
-
     public static String toString(int arg) {
         return Integer.toString(arg);
     }
@@ -103,15 +111,30 @@ public class Helpers extends BasePage {
         select.selectByVisibleText(text);
     }
 
-    public static void getDropDownListByValue(WebElement element, String value) {
+    public static void setDropDownListByValue(WebElement element, String value) {
         Select select = new Select(element);
         select.selectByValue(value);
     }
+    public static void setDropDownListByText(WebElement element, String text) {
+        Select select = new Select(element);
+        select.selectByVisibleText(text);
+    }
 
-    public static void getDropDownListByRandomValue(WebElement element, String ValueAttributeName) {
+    public static String getDropDownListByRandomValue(WebElement element, String ValueAttributeName) {
         Select select = new Select(element);
         int selectOption = Helpers.randomInt(0, select.getOptions().size());
-        select.selectByValue(select.getOptions().get(selectOption).getAttribute(ValueAttributeName));
+        return select.getOptions().get(selectOption).getAttribute(ValueAttributeName);
+    }
+
+    public static HashMap<String,String> getDropDownMapRangeByRandomValue(WebElement minElement, WebElement maxElement, String ValueAttributeName) {
+        Select selectMin = new Select(minElement);
+        Select selectMax = new Select(maxElement);
+        int selectOptionMin = Helpers.randomInt(0, selectMin.getOptions().size());
+        int selectOptionMax = Helpers.randomInt(selectOptionMin, selectMax.getOptions().size());
+        HashMap<String,String> minMaxValues = new HashMap<>();
+        minMaxValues.put("min", selectMin.getOptions().get(selectOptionMin).getAttribute(ValueAttributeName));
+        minMaxValues.put("max", selectMax.getOptions().get(selectOptionMax).getAttribute(ValueAttributeName));
+        return minMaxValues;
     }
 
     //overload

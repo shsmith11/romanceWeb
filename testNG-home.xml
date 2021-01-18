@@ -13,7 +13,7 @@
         </groups>
 
         <classes>
-            <class name ="HomeTest">
+            <class name ="com.romanceabroad.ui.HomeTest">
                 <methods>
                     <include name=".*Home.*"/>
                     <include name=".*Frame.*"/>

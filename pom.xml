@@ -76,13 +76,13 @@
             <version>3.4</version>
             <scope>compile</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.tngtech.java/junit-dataprovider -->
-        <dependency>
-            <groupId>com.tngtech.java</groupId>
-            <artifactId>junit-dataprovider</artifactId>
-            <version>1.13.1</version>
-            <scope>test</scope>
-        </dependency>
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.tngtech.java/junit-dataprovider &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.tngtech.java</groupId>-->
+<!--            <artifactId>junit-dataprovider</artifactId>-->
+<!--            <version>1.13.1</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
         <dependency>
             <groupId>io.rest-assured</groupId>

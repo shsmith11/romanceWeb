@@ -13,7 +13,7 @@
             </run>
         </groups>
         <classes>
-            <class name ="RegistrationTest"/>
+            <class name ="com.romanceabroad.ui.RegistrationTest"/>
         </classes>
     </test>
 
@@ -21,7 +21,7 @@
         <parameter name="browser" value="firefox"/>
 
         <classes>
-            <class name="ContactUsTests">
+            <class name="com.romanceabroad.ui.ContactUsTests">
                 <parameter name="email" value="sh11user-test@gmail.com" />
                 <parameter name="password" value="te$t$tudent02" />
                 <methods>
@@ -29,13 +29,13 @@
                     <exclude name="ContactAdminPageErrorMsgVerification"/>
                 </methods>
             </class>
-            <class name ="RegistrationTest">
+            <class name ="com.romanceabroad.ui.RegistrationTest">
                 <methods>
                     <include name="signUpDataValidationPopUpHome"/>
                     <include name="signUpDataValidationRegistrationPage"/>
                 </methods>
             </class>
-            <class name="HomeTest">
+            <class name="com.romanceabroad.ui.HomeTest">
                 <methods>
                     <include name="isHomePage"/>
                     <include name="iFrameButtonTest"/>
@@ -45,23 +45,23 @@
                     <include name="wordCountExample"/>
                 </methods>
             </class>
-            <class name="PrettyWomanTests">
+            <class name="com.romanceabroad.ui.PrettyWomanTests">
                 <methods>
                     <include name="isPrettyWomanPage"/>
                     <include name="checkSearchButtonResult"/>
                 </methods>
             </class>
-            <class name="HowWeWorkTests">
+            <class name="com.romanceabroad.ui.HowWeWorkTests">
                 <methods>
                     <include name="isHowWeWorkPage"/>
                 </methods>
             </class>
-            <class name="LogInTests">
+            <class name="com.romanceabroad.ui.LogInTests">
                 <methods>
                     <include name="signInIncorrectErrorShowsUp"/>
                 </methods>
             </class>
-            <class name="PhotosTests">
+            <class name="com.romanceabroad.ui.PhotosTests">
                 <methods>
                     <include name="isPhotoPage"/>
                     <include name="isPicturesLoaded"/>
@@ -71,13 +71,28 @@
 
     </test>
 
-    <test name="ChromeTestCasesRegistration" enabled="true">
+    <test name="ChromeTestCasesRegistration" enabled="false">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name ="RegistrationTest">
+            <class name ="com.romanceabroad.ui.RegistrationTest">
                 <methods>
                     <include name="signUpDataValidationPopUpHome"/>
                     <include name="signUpDataValidationRegistrationPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="ChromeTestCasesContactUs" enabled="true">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="password" value="te$t$tudent02" />
+        <classes>
+            <class name="com.romanceabroad.ui.ContactUsTests">
+                <parameter name="email" value="sh11user-test@gmail.com" />
+                <parameter name="password" value="te$t$tudent02" />
+                <methods>
+                    <include name="ContactAdminPageEnteredDataVerification"/>
+                    <exclude name="ContactAdminPageErrorMsgVerification"/>
                 </methods>
             </class>
         </classes>
@@ -86,7 +101,7 @@
     <test name="ChromeTestCases" enabled="false">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="ContactUsTests">
+            <class name="com.romanceabroad.ui.ContactUsTests">
                 <parameter name="email" value="sh11user-test@gmail.com" />
                 <parameter name="password" value="te$t$tudent02" />
                 <methods>
@@ -94,42 +109,42 @@
                     <exclude name="ContactAdminPageErrorMsgVerification"/>
                 </methods>
             </class>
-            <class name ="RegistrationTest">
+            <class name ="com.romanceabroad.ui.RegistrationTest">
                 <methods>
-                    <include name="signUpDataValidationPopUpHome"/>
-                    <include name="signUpDataValidationRegistrationPage"/>
+                    <exclude name="signUpDataValidationPopUpHome"/>
+                    <exclude name="signUpDataValidationRegistrationPage"/>
                 </methods>
             </class>
-            <class name="HomeTest">
+            <class name="com.romanceabroad.ui.HomeTest">
                 <methods>
-                    <include name="isHomePage"/>
-                    <include name="iFrameButtonTest"/>
-                    <include name="iFrameButtonTestAction"/>
+                    <exclude name="isHomePage"/>
+                    <exclude name="iFrameButtonTest"/>
+                    <exclude name="iFrameButtonTestAction"/>
                     <exclude name="navMenuOpenLinksCheck"/>
-                    <include name="justFaiTest"/>
-                    <include name="wordCountExample"/>
+                    <exclude name="justFaiTest"/>
+                    <exclude name="wordCountExample"/>
                 </methods>
             </class>
-            <class name="PrettyWomanTests">
+            <class name="com.romanceabroad.ui.PrettyWomanTests">
                 <methods>
-                    <include name="isPrettyWomanPage"/>
-                    <include name="checkSearchButtonResult"/>
+                    <exclude name="isPrettyWomanPage"/>
+                    <exclude name="checkSearchButtonResult"/>
                 </methods>
             </class>
-            <class name="HowWeWorkTests">
+            <class name="com.romanceabroad.ui.HowWeWorkTests">
                 <methods>
-                    <include name="isHowWeWorkPage"/>
+                    <exclude name="isHowWeWorkPage"/>
                 </methods>
             </class>
-            <class name="LogInTests">
+            <class name="com.romanceabroad.ui.LogInTests">
                 <methods>
-                    <include name="signInIncorrectErrorShowsUp"/>
+                    <exclude name="signInIncorrectErrorShowsUp"/>
                 </methods>
             </class>
-            <class name="PhotosTests">
+            <class name="com.romanceabroad.ui.PhotosTests">
                 <methods>
-                    <include name="isPhotoPage"/>
-                    <include name="isPicturesLoaded"/>
+                    <exclude name="isPhotoPage"/>
+                    <exclude name="isPicturesLoaded"/>
                 </methods>
             </class>
         </classes>
@@ -138,7 +153,7 @@
     <test name="EdgeTestCases" enabled="false">
         <parameter name="browser" value="edge"/>
         <classes>
-            <class name="ContactUsTests">
+            <class name="com.romanceabroad.ui.ContactUsTests">
                 <parameter name="email" value="sh11user-test@gmail.com" />
                 <parameter name="password" value="te$t$tudent02" />
                 <methods>
@@ -146,13 +161,13 @@
                     <exclude name="ContactAdminPageErrorMsgVerification"/>
                 </methods>
             </class>
-            <class name ="RegistrationTest">
+            <class name ="com.romanceabroad.ui.RegistrationTest">
                 <methods>
                     <include name="signUpDataValidationPopUpHome"/>
                     <include name="signUpDataValidationRegistrationPage"/>
                 </methods>
             </class>
-            <class name="HomeTest">
+            <class name="com.romanceabroad.ui.HomeTest">
                 <methods>
                     <include name="isHomePage"/>
                     <include name="iFrameButtonTest"/>
@@ -162,23 +177,23 @@
                     <include name="wordCountExample"/>
                 </methods>
             </class>
-            <class name="PrettyWomanTests">
+            <class name="com.romanceabroad.ui.PrettyWomanTests">
                 <methods>
                     <include name="isPrettyWomanPage"/>
                     <include name="checkSearchButtonResult"/>
                 </methods>
             </class>
-            <class name="HowWeWorkTests">
+            <class name="com.romanceabroad.ui.HowWeWorkTests">
                 <methods>
                     <include name="isHowWeWorkPage"/>
                 </methods>
             </class>
-            <class name="LogInTests">
+            <class name="com.romanceabroad.ui.LogInTests">
                 <methods>
                     <include name="signInIncorrectErrorShowsUp"/>
                 </methods>
             </class>
-            <class name="PhotosTests">
+            <class name="com.romanceabroad.ui.PhotosTests">
                 <methods>
                     <include name="isPhotoPage"/>
                     <include name="isPicturesLoaded"/>
@@ -190,7 +205,7 @@
     <test name="OperaTestCases" enabled="false">
         <parameter name="browser" value="opera"/>
         <classes>
-            <class name="ContactUsTests">
+            <class name="com.romanceabroad.ui.ContactUsTests">
                 <parameter name="email" value="sh11user-test@gmail.com" />
                 <parameter name="password" value="te$t$tudent02" />
                 <methods>
@@ -198,13 +213,13 @@
                     <exclude name="ContactAdminPageErrorMsgVerification"/>
                 </methods>
             </class>
-            <class name ="RegistrationTest">
+            <class name ="com.romanceabroad.ui.RegistrationTest">
                 <methods>
                     <include name="signUpDataValidationPopUpHome"/>
                     <include name="signUpDataValidationRegistrationPage"/>
                 </methods>
             </class>
-            <class name="HomeTest">
+            <class name="com.romanceabroad.ui.HomeTest">
                 <methods>
                     <include name="isHomePage"/>
                     <include name="iFrameButtonTest"/>
@@ -214,23 +229,23 @@
                     <include name="wordCountExample"/>
                 </methods>
             </class>
-            <class name="PrettyWomanTests">
+            <class name="com.romanceabroad.ui.PrettyWomanTests">
                 <methods>
                     <include name="isPrettyWomanPage"/>
                     <include name="checkSearchButtonResult"/>
                 </methods>
             </class>
-            <class name="HowWeWorkTests">
+            <class name="com.romanceabroad.ui.HowWeWorkTests">
                 <methods>
                     <include name="isHowWeWorkPage"/>
                 </methods>
             </class>
-            <class name="LogInTests">
+            <class name="com.romanceabroad.ui.LogInTests">
                 <methods>
                     <include name="signInIncorrectErrorShowsUp"/>
                 </methods>
             </class>
-            <class name="PhotosTests">
+            <class name="com.romanceabroad.ui.PhotosTests">
                 <methods>
                     <include name="isPhotoPage"/>
                     <include name="isPicturesLoaded"/>

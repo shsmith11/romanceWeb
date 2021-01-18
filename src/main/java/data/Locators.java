@@ -73,6 +73,7 @@ final public class Locators {
     // PRETTY WOMAN page data.Locators
     public static String dropDownMinAge = "//select[@id='age_min']";
     public static String dropDownMaxAge = "//select[@id='age_max']";
+    public static String dropDownSorter = "//select[contains (@id,'sorter-select')]";
     public static String blockMinMaxAge ="//div[@class='search-form']";
     public static String textPeopleFoundOnPageNoFound = "//h2[@class='text-center p10']";
     public static String textPeopleFoundOnPage ="//div[@class='lh30']";

@@ -607,15 +607,49 @@ Process finished with exit code 0
                             <li class="level suite open">
                                 <span><em class="time">
                                         <div class="time">16.40 s</div>
-                                    </em>LogInTests</span>
+                                    </em>com.romanceabroad.ui.LogInTests</span>
                                 <ul>
                                     <li class="level test failed open">
                                         <span><em class="time">
                                                 <div class="time">16.40 s</div>
-                                            </em><em class="status">error</em>LogInTests.signInIncorrectErrorShowsUp</span>
+                                            </em><em class="status">error</em>com.romanceabroad.ui.LogInTests.signInIncorrectErrorShowsUp</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stderr">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&#39;email&#39;]&quot;}<br/>  (Session info: chrome=87.0.4280.88)<br/>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;DESKTOP-A602HLO&#39;, ip: &#39;192.168.50.26&#39;, os.name: &#39;Windows 10&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;15.0.1&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61686}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}<br/>Session ID: 1a911e58ec4aaff633d69bb4dbb9f361<br/>*** Element info: {Using=xpath, value=//input[@id=&#39;email&#39;]}<br/><br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br/>	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br/>	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)<br/>	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)<br/>	at pageObjects.LoginPage.inputEmail(LoginPage.java:12)<br/>	at pageObjects.LoginPage.signInIncorrect(LoginPage.java:23)<br/>	at LogInTests.signInIncorrectErrorShowsUp(LogInTests.java:11)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br/>	at java.base/java.lang.Thread.run(Thread.java:832)<br/></span>
+                                                <span class="stderr">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&#39;email&#39;]&quot;}<br/>  (Session info: chrome=87.0.4280.88)<br/>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;DESKTOP-A602HLO&#39;, ip: &#39;192.168.50.26&#39;, os.name: &#39;Windows 10&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;15.0.1&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61686}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}<br/>Session ID: 1a911e58ec4aaff633d69bb4dbb9f361<br/>*** Element info: {Using=xpath, value=//input[@id=&#39;email&#39;]}<br/>
+<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+<br/>	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+<br/>	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>	at LoginPage.inputEmail(LoginPage.java:12)
+<br/>	at LoginPage.signInIncorrect(LoginPage.java:23)
+<br/>	at com.romanceabroad.ui.LogInTests.signInIncorrectErrorShowsUp(com.romanceabroad.ui.LogInTests.java:11)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+<br/>	at java.base/java.lang.Thread.run(Thread.java:832)
+<br/></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -624,18 +658,52 @@ Process finished with exit code 0
                             <li class="level suite open">
                                 <span><em class="time">
                                         <div class="time">16.27 s</div>
-                                    </em>PrettyWomanTests</span>
+                                    </em>com.romanceabroad.ui.PrettyWomanTests</span>
                                 <ul>
                                     <li class="level test failed open">
                                         <span><em class="time">
                                                 <div class="time">16.27 s</div>
-                                            </em><em class="status">error</em>PrettyWomanTests.checkSearchButtonResult</span>
+                                            </em><em class="status">error</em>com.romanceabroad.ui.PrettyWomanTests.checkSearchButtonResult</span>
                                         <ul>
                                             <li class="text">
                                                 <span class="stdout"></span>
                                             </li>
                                             <li class="text">
-                                                <span class="stderr">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&#39;search-form&#39;]&quot;}<br/>  (Session info: chrome=87.0.4280.88)<br/>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;DESKTOP-A602HLO&#39;, ip: &#39;192.168.50.26&#39;, os.name: &#39;Windows 10&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;15.0.1&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61686}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}<br/>Session ID: 1a911e58ec4aaff633d69bb4dbb9f361<br/>*** Element info: {Using=xpath, value=//div[@class=&#39;search-form&#39;]}<br/><br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br/>	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br/>	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)<br/>	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)<br/>	at pageObjects.PrettyWomanPage.blockMinMaxAge(PrettyWomanPage.java:17)<br/>	at pageObjects.PrettyWomanPage.setMinMaxAgeSelect(PrettyWomanPage.java:44)<br/>	at PrettyWomanTests.checkSearchButtonResult(PrettyWomanTests.java:18)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br/>	at java.base/java.lang.Thread.run(Thread.java:832)<br/></span>
+                                                <span class="stderr">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&#39;search-form&#39;]&quot;}<br/>  (Session info: chrome=87.0.4280.88)<br/>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;DESKTOP-A602HLO&#39;, ip: &#39;192.168.50.26&#39;, os.name: &#39;Windows 10&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;15.0.1&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61686}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}<br/>Session ID: 1a911e58ec4aaff633d69bb4dbb9f361<br/>*** Element info: {Using=xpath, value=//div[@class=&#39;search-form&#39;]}<br/>
+<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+<br/>	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+<br/>	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>	at PrettyWomanPage.blockMinMaxAge(PrettyWomanPage.java:17)
+<br/>	at PrettyWomanPage.setMinMaxAgeSelect(PrettyWomanPage.java:44)
+<br/>	at com.romanceabroad.ui.PrettyWomanTests.checkSearchButtonResult(com.romanceabroad.ui.PrettyWomanTests.java:18)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+<br/>	at java.base/java.lang.Thread.run(Thread.java:832)
+<br/></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -644,12 +712,12 @@ Process finished with exit code 0
                             <li class="level suite open">
                                 <span><em class="time">
                                         <div class="time">16.20 s</div>
-                                    </em>PhotosTests</span>
+                                    </em>com.romanceabroad.ui.PhotosTests</span>
                                 <ul>
                                     <li class="level test failed open">
                                         <span><em class="time">
                                                 <div class="time">16.20 s</div>
-                                            </em><em class="status">failed</em>PhotosTests.isPhotoPage</span>
+                                            </em><em class="status">failed</em>com.romanceabroad.ui.PhotosTests.isPhotoPage</span>
                                         <ul>
                                             <li class="text">
                                                 <span class="stderr">java.lang.AssertionError: expected [true] but found [false]<br/></span>
@@ -664,7 +732,28 @@ Process finished with exit code 0
                                                 <span class="stdout">Actual   :<br/></span>
                                             </li>
                                             <li class="text">
-                                                <span class="stderr">false<br/><br/>	at org.testng.Assert.fail(Assert.java:99)<br/>	at org.testng.Assert.failNotEquals(Assert.java:1037)<br/>	at org.testng.Assert.assertTrue(Assert.java:45)<br/>	at org.testng.Assert.assertTrue(Assert.java:55)<br/>	at PhotosTests.isPhotoPage(PhotosTests.java:12)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br/>	at java.base/java.lang.Thread.run(Thread.java:832)<br/></span>
+                                                <span class="stderr">false<br/>
+<br/>	at org.testng.Assert.fail(Assert.java:99)
+<br/>	at org.testng.Assert.failNotEquals(Assert.java:1037)
+<br/>	at org.testng.Assert.assertTrue(Assert.java:45)
+<br/>	at org.testng.Assert.assertTrue(Assert.java:55)
+<br/>	at com.romanceabroad.ui.PhotosTests.isPhotoPage(com.romanceabroad.ui.PhotosTests.java:12)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+<br/>	at java.base/java.lang.Thread.run(Thread.java:832)
+<br/></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -673,27 +762,61 @@ Process finished with exit code 0
                             <li class="level suite open">
                                 <span><em class="time">
                                         <div class="time">16.16 s</div>
-                                    </em>HowWeWorkTests</span>
+                                    </em>com.romanceabroad.ui.HowWeWorkTests</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
                                                 <div class="time">16.16 s</div>
-                                            </em><em class="status">passed</em>HowWeWorkTests.isHowWeWorkPage</span>
+                                            </em><em class="status">passed</em>com.romanceabroad.ui.HowWeWorkTests.isHowWeWorkPage</span>
                                     </li>
                                 </ul>
                             </li>
                             <li class="level suite open">
                                 <span><em class="time">
                                         <div class="time">7.19 s</div>
-                                    </em>RegistrationTest</span>
+                                    </em>com.romanceabroad.ui.RegistrationTest</span>
                                 <ul>
                                     <li class="level test failed open">
                                         <span><em class="time">
                                                 <div class="time">7.19 s</div>
-                                            </em><em class="status">error</em>RegistrationTest.signUpDataValidationPopUpHome</span>
+                                            </em><em class="status">error</em>com.romanceabroad.ui.RegistrationTest.signUpDataValidationPopUpHome</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stderr">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@id=&#39;show-registration-block&#39;]&quot;}<br/>  (Session info: chrome=87.0.4280.88)<br/>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;DESKTOP-A602HLO&#39;, ip: &#39;192.168.50.26&#39;, os.name: &#39;Windows 10&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;15.0.1&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61774}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}<br/>Session ID: 800fe7d7e145e87482ed991e40f3a985<br/>*** Element info: {Using=xpath, value=//button[@id=&#39;show-registration-block&#39;]}<br/><br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br/>	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br/>	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)<br/>	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)<br/>	at pageObjects.RegistrationPage.buttonJoinForFree(RegistrationPage.java:23)<br/>	at pageObjects.RegistrationPage.openFormPopUpFromHome(RegistrationPage.java:61)<br/>	at RegistrationTest.signUpDataValidationPopUpHome(RegistrationTest.java:13)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br/>	at java.base/java.lang.Thread.run(Thread.java:832)<br/></span>
+                                                <span class="stderr">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@id=&#39;show-registration-block&#39;]&quot;}<br/>  (Session info: chrome=87.0.4280.88)<br/>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;DESKTOP-A602HLO&#39;, ip: &#39;192.168.50.26&#39;, os.name: &#39;Windows 10&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;15.0.1&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61774}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}<br/>Session ID: 800fe7d7e145e87482ed991e40f3a985<br/>*** Element info: {Using=xpath, value=//button[@id=&#39;show-registration-block&#39;]}<br/>
+<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+<br/>	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+<br/>	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>	at RegistrationPage.buttonJoinForFree(RegistrationPage.java:23)
+<br/>	at RegistrationPage.openFormPopUpFromHome(RegistrationPage.java:61)
+<br/>	at com.romanceabroad.ui.RegistrationTest.signUpDataValidationPopUpHome(com.romanceabroad.ui.RegistrationTest.java:13)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+<br/>	at java.base/java.lang.Thread.run(Thread.java:832)
+<br/></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -702,15 +825,35 @@ Process finished with exit code 0
                             <li class="level suite open">
                                 <span><em class="time">
                                         <div class="time">22.25 s</div>
-                                    </em>PhotosTests</span>
+                                    </em>com.romanceabroad.ui.PhotosTests</span>
                                 <ul>
                                     <li class="level test failed open">
                                         <span><em class="time">
                                                 <div class="time">22.25 s</div>
-                                            </em><em class="status">error</em>PhotosTests.isPicturesLoaded</span>
+                                            </em><em class="status">error</em>com.romanceabroad.ui.PhotosTests.isPicturesLoaded</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stderr">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;DESKTOP-A602HLO&#39;, ip: &#39;192.168.50.26&#39;, os.name: &#39;Windows 10&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;15.0.1&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61774}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}<br/><br/>	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)<br/>	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)<br/>	at pageObjects.PhotosPage.loadAlbymPictures(PhotosPage.java:29)<br/>	at PhotosTests.isPicturesLoaded(PhotosTests.java:18)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br/>	at java.base/java.lang.Thread.run(Thread.java:832)<br/></span>
+                                                <span class="stderr">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;DESKTOP-A602HLO&#39;, ip: &#39;192.168.50.26&#39;, os.name: &#39;Windows 10&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;15.0.1&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61774}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}<br/>
+<br/>	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+<br/>	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+<br/>	at PhotosPage.loadAlbymPictures(PhotosPage.java:29)
+<br/>	at com.romanceabroad.ui.PhotosTests.isPicturesLoaded(com.romanceabroad.ui.PhotosTests.java:18)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+<br/>	at java.base/java.lang.Thread.run(Thread.java:832)
+<br/></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -719,12 +862,12 @@ Process finished with exit code 0
                             <li class="level suite open">
                                 <span><em class="time">
                                         <div class="time">12.30 s</div>
-                                    </em>PrettyWomanTests</span>
+                                    </em>com.romanceabroad.ui.PrettyWomanTests</span>
                                 <ul>
                                     <li class="level test failed open">
                                         <span><em class="time">
                                                 <div class="time">12.30 s</div>
-                                            </em><em class="status">failed</em>PrettyWomanTests.isPrettyWomanPage</span>
+                                            </em><em class="status">failed</em>com.romanceabroad.ui.PrettyWomanTests.isPrettyWomanPage</span>
                                         <ul>
                                             <li class="text">
                                                 <span class="stderr">java.lang.AssertionError: expected [Meet single Ukrainian women online: dating and marriage at Marry Ukrainian Lady] but found [Settings]<br/></span>
@@ -739,7 +882,30 @@ Process finished with exit code 0
                                                 <span class="stdout">Actual   :<br/></span>
                                             </li>
                                             <li class="text">
-                                                <span class="stderr">Settings<br/><br/>	at org.testng.Assert.fail(Assert.java:99)<br/>	at org.testng.Assert.failNotEquals(Assert.java:1037)<br/>	at org.testng.Assert.assertEqualsImpl(Assert.java:140)<br/>	at org.testng.Assert.assertEquals(Assert.java:122)<br/>	at org.testng.Assert.assertEquals(Assert.java:629)<br/>	at org.testng.Assert.assertEquals(Assert.java:639)<br/>	at PrettyWomanTests.isPrettyWomanPage(PrettyWomanTests.java:12)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br/>	at java.base/java.lang.Thread.run(Thread.java:832)<br/></span>
+                                                <span class="stderr">Settings<br/>
+<br/>	at org.testng.Assert.fail(Assert.java:99)
+<br/>	at org.testng.Assert.failNotEquals(Assert.java:1037)
+<br/>	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+<br/>	at org.testng.Assert.assertEquals(Assert.java:122)
+<br/>	at org.testng.Assert.assertEquals(Assert.java:629)
+<br/>	at org.testng.Assert.assertEquals(Assert.java:639)
+<br/>	at com.romanceabroad.ui.PrettyWomanTests.isPrettyWomanPage(com.romanceabroad.ui.PrettyWomanTests.java:12)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+<br/>	at java.base/java.lang.Thread.run(Thread.java:832)
+<br/></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -748,27 +914,60 @@ Process finished with exit code 0
                             <li class="level suite open">
                                 <span><em class="time">
                                         <div class="time">12.14 s</div>
-                                    </em>ContactUsTests</span>
+                                    </em>com.romanceabroad.ui.ContactUsTests</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
                                                 <div class="time">12.14 s</div>
-                                            </em><em class="status">passed</em>ContactUsTests.ContactAdminPageEnteredDataVerification[sh11user-test@gmail.com]</span>
+                                            </em><em class="status">passed</em>com.romanceabroad.ui.ContactUsTests.ContactAdminPageEnteredDataVerification[sh11user-test@gmail.com]</span>
                                     </li>
                                 </ul>
                             </li>
                             <li class="level suite open">
                                 <span><em class="time">
                                         <div class="time">8.47 s</div>
-                                    </em>RegistrationTest</span>
+                                    </em>com.romanceabroad.ui.RegistrationTest</span>
                                 <ul>
                                     <li class="level test failed open">
                                         <span><em class="time">
                                                 <div class="time">8.47 s</div>
-                                            </em><em class="status">error</em>RegistrationTest.signUpDataValidationRegistrationPage</span>
+                                            </em><em class="status">error</em>com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stderr">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&#39;email&#39;]&quot;}<br/>  (Session info: chrome=87.0.4280.88)<br/>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;DESKTOP-A602HLO&#39;, ip: &#39;192.168.50.26&#39;, os.name: &#39;Windows 10&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;15.0.1&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61873}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}<br/>Session ID: ab3b55468fdf5e54828e282a74a24286<br/>*** Element info: {Using=xpath, value=//input[@name=&#39;email&#39;]}<br/><br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br/>	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br/>	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)<br/>	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)<br/>	at pageObjects.RegistrationPage.inputRegFormEmailXpath(RegistrationPage.java:43)<br/>	at RegistrationTest.signUpDataValidationRegistrationPage(RegistrationTest.java:33)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br/>	at java.base/java.lang.Thread.run(Thread.java:832)<br/></span>
+                                                <span class="stderr">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&#39;email&#39;]&quot;}<br/>  (Session info: chrome=87.0.4280.88)<br/>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;DESKTOP-A602HLO&#39;, ip: &#39;192.168.50.26&#39;, os.name: &#39;Windows 10&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;15.0.1&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61873}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}<br/>Session ID: ab3b55468fdf5e54828e282a74a24286<br/>*** Element info: {Using=xpath, value=//input[@name=&#39;email&#39;]}<br/>
+<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+<br/>	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+<br/>	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>	at RegistrationPage.inputRegFormEmailXpath(RegistrationPage.java:43)
+<br/>	at com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage(com.romanceabroad.ui.RegistrationTest.java:33)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+<br/>	at java.base/java.lang.Thread.run(Thread.java:832)
+<br/></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -777,12 +976,12 @@ Process finished with exit code 0
                             <li class="level suite open">
                                 <span><em class="time">
                                         <div class="time">8.79 s</div>
-                                    </em>HomeTest</span>
+                                    </em>com.romanceabroad.ui.HomeTest</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
                                                 <div class="time">8.79 s</div>
-                                            </em><em class="status">passed</em>HomeTest.iFrameButtonTest</span>
+                                            </em><em class="status">passed</em>com.romanceabroad.ui.HomeTest.iFrameButtonTest</span>
                                         <ul>
                                             <li class="text">
                                                 <span class="stdout"></span>
@@ -794,25 +993,59 @@ Process finished with exit code 0
                             <li class="level suite failed open">
                                 <span><em class="time">
                                         <div class="time">3 m 23 s</div>
-                                    </em>HomeTest</span>
+                                    </em>com.romanceabroad.ui.HomeTest</span>
                                 <ul>
                                     <li class="level test failed open">
                                         <span><em class="time">
                                                 <div class="time">13.79 s</div>
-                                            </em><em class="status">error</em>HomeTest.iFrameButtonTestAction</span>
+                                            </em><em class="status">error</em>com.romanceabroad.ui.HomeTest.iFrameButtonTestAction</span>
                                         <ul>
                                             <li class="text">
                                                 <span class="stdout"></span>
                                             </li>
                                             <li class="text">
-                                                <span class="stderr">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&#39;playing-mode&#39;)]&quot;}<br/>  (Session info: chrome=87.0.4280.88)<br/>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;DESKTOP-A602HLO&#39;, ip: &#39;192.168.50.26&#39;, os.name: &#39;Windows 10&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;15.0.1&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61930}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}<br/>Session ID: d46132b3a1c9c4b61735d666e797e9fa<br/>*** Element info: {Using=xpath, value=//div[contains(@class,&#39;playing-mode&#39;)]}<br/><br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br/>	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br/>	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)<br/>	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)<br/>	at pageObjects.HomePage.iFrameVideoYoutubePlaying(HomePage.java:18)<br/>	at pageObjects.HomePage.isVideoPlaying(HomePage.java:50)<br/>	at HomeTest.iFrameButtonTestAction(HomeTest.java:31)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br/>	at java.base/java.lang.Thread.run(Thread.java:832)<br/></span>
+                                                <span class="stderr">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&#39;playing-mode&#39;)]&quot;}<br/>  (Session info: chrome=87.0.4280.88)<br/>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;DESKTOP-A602HLO&#39;, ip: &#39;192.168.50.26&#39;, os.name: &#39;Windows 10&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;15.0.1&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61930}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}<br/>Session ID: d46132b3a1c9c4b61735d666e797e9fa<br/>*** Element info: {Using=xpath, value=//div[contains(@class,&#39;playing-mode&#39;)]}<br/>
+<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+<br/>	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+<br/>	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>	at HomePage.iFrameVideoYoutubePlaying(HomePage.java:18)
+<br/>	at HomePage.isVideoPlaying(HomePage.java:50)
+<br/>	at com.romanceabroad.ui.HomeTest.iFrameButtonTestAction(com.romanceabroad.ui.HomeTest.java:31)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+<br/>	at java.base/java.lang.Thread.run(Thread.java:832)
+<br/></span>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
                                                 <div class="time">2.95 s</div>
-                                            </em><em class="status">passed</em>HomeTest.isHomePage</span>
+                                            </em><em class="status">passed</em>com.romanceabroad.ui.HomeTest.isHomePage</span>
                                         <ul>
                                             <li class="text">
                                                 <span class="stdout"></span>
@@ -822,20 +1055,39 @@ Process finished with exit code 0
                                     <li class="level test failed open">
                                         <span><em class="time">
                                                 <div class="time">3.05 s</div>
-                                            </em><em class="status">failed</em>HomeTest.justFaiTest</span>
+                                            </em><em class="status">failed</em>com.romanceabroad.ui.HomeTest.justFaiTest</span>
                                         <ul>
                                             <li class="text">
                                                 <span class="stdout"></span>
                                             </li>
                                             <li class="text">
-                                                <span class="stderr">java.lang.AssertionError: null<br/><br/>	at org.testng.Assert.fail(Assert.java:99)<br/>	at org.testng.Assert.fail(Assert.java:106)<br/>	at HomeTest.justFaiTest(HomeTest.java:48)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br/>	at java.base/java.lang.Thread.run(Thread.java:832)<br/></span>
+                                                <span class="stderr">java.lang.AssertionError: null<br/>
+<br/>	at org.testng.Assert.fail(Assert.java:99)
+<br/>	at org.testng.Assert.fail(Assert.java:106)
+<br/>	at com.romanceabroad.ui.HomeTest.justFaiTest(com.romanceabroad.ui.HomeTest.java:48)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+<br/>	at java.base/java.lang.Thread.run(Thread.java:832)
+<br/></span>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="level test failed open">
                                         <span><em class="time">
                                                 <div class="time">1 m 41 s</div>
-                                            </em><em class="status">failed</em>HomeTest.navMenuOpenLinksCheck</span>
+                                            </em><em class="status">failed</em>com.romanceabroad.ui.HomeTest.navMenuOpenLinksCheck</span>
                                         <ul>
                                             <li class="text">
                                                 <span class="stdout">0/7 - HOME<br/>1/7 - HOW WE WORK<br/>2/7 - PRETTY WOMEN<br/>3/7 - PHOTOS<br/>4/7 - GIFTS<br/>5/7 - TOUR TO UKRAINE<br/>6/7 - BLOG<br/>urls :: [https://romanceabroad.com/#, https://romanceabroad.com/content/view/how-it-works, https://romanceabroad.com/, https://romanceabroad.com/media/index, https://romanceabroad.com/store/category-sweets, https://romanceabroad.com/store/sweets/20-tour_to_ukraine, https://romanceabroad.com/]<br/>h1 :: [UKRAINIAN GIRLS DATING SITE, , UKRAINIAN GIRLS DATING SITE, , , , UKRAINIAN GIRLS DATING SITE]<br/>titles :: [The Best Free Ukrainian Dating Site| Romanceabroad.Com, Real Ukrainian women for marriage: legitimate dating site Marry Ukrainian Lady, The Best Free Ukrainian Dating Site| Romanceabroad.Com, Ukrainian women photos: ladies pictures at Marry Ukrainian Lady, Pilot Group: Gift store - Categories, , The Best Free Ukrainian Dating Site| Romanceabroad.Com]<br/>iteration 0,  assertState:  3<br/>Expected titles- The Best Free Ukrainian Dating Site| Romanceabroad.Com<br/>Actual titles- The Best Free Ukrainian Dating Site| Romanceabroad.Com<br/>Expected h1- UKRAINIAN GIRLS DATING SITE<br/>Actual h1- UKRAINIAN GIRLS DATING SITE<br/>Expected urls- https://romanceabroad.com/#<br/>Actual urls- https://romanceabroad.com/#<br/>________________________<br/>iteration 1,  assertState:  2<br/>Expected titles- Real Ukrainian women for marriage: legitimate dating site Marry Ukrainian Lady<br/>Actual titles- Real Ukrainian women for marriage: legitimate dating site Marry Ukrainian Lady<br/>Expected h1- Ukrainian women for marriage<br/>Actual h1- <br/>Expected urls- https://romanceabroad.com/content/view/how-it-works<br/>Actual urls- https://romanceabroad.com/content/view/how-it-works<br/>________________________<br/></span>
@@ -853,14 +1105,35 @@ Process finished with exit code 0
                                                 <span class="stdout">Actual   :<br/></span>
                                             </li>
                                             <li class="text">
-                                                <span class="stderr">false<br/><br/>	at org.testng.Assert.fail(Assert.java:99)<br/>	at org.testng.Assert.failNotEquals(Assert.java:1037)<br/>	at org.testng.Assert.assertTrue(Assert.java:45)<br/>	at org.testng.Assert.assertTrue(Assert.java:55)<br/>	at HomeTest.navMenuOpenLinksCheck(HomeTest.java:39)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br/>	at java.base/java.lang.Thread.run(Thread.java:832)<br/></span>
+                                                <span class="stderr">false<br/>
+<br/>	at org.testng.Assert.fail(Assert.java:99)
+<br/>	at org.testng.Assert.failNotEquals(Assert.java:1037)
+<br/>	at org.testng.Assert.assertTrue(Assert.java:45)
+<br/>	at org.testng.Assert.assertTrue(Assert.java:55)
+<br/>	at com.romanceabroad.ui.HomeTest.navMenuOpenLinksCheck(com.romanceabroad.ui.HomeTest.java:39)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+<br/>	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+<br/>	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+<br/>	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+<br/>	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+<br/>	at java.base/java.lang.Thread.run(Thread.java:832)
+<br/></span>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
                                                 <div class="time">3.83 s</div>
-                                            </em><em class="status">passed</em>HomeTest.wordCountExample</span>
+                                            </em><em class="status">passed</em>com.romanceabroad.ui.HomeTest.wordCountExample</span>
                                         <ul>
                                             <li class="text">
                                                 <span class="stdout">[0 - LOVE, 1 - starts, 2 - here…<br/>We, 3 - know, 4 - that, 5 - Love, 6 - is, 7 - not, 8 - easy, 9 - to, 10 - find, 11 - and, 12 - we, 13 - know, 14 - that, 15 - a, 16 - true, 17 - soul, 18 - mate, 19 - is, 20 - even, 21 - more, 22 - elusive,, 23 - especially, 24 - for, 25 - successful, 26 - and, 27 - discerning, 28 - gentlemen.<br/>Romance, 29 - Abroad, 30 - Ukrainian, 31 - Matchmaking, 32 - Agency, 33 - is, 34 - here, 35 - to, 36 - help, 37 - you, 38 - find, 39 - the, 40 - right, 41 - partner, 42 - and, 43 - build, 44 - a, 45 - successful, 46 - long-term, 47 - relationship.<br/>Being, 48 - a, 49 - member, 50 - of, 51 - our, 52 - elite, 53 - dating, 54 - agency, 55 - in, 56 - Ukraine, 57 - means, 58 - access, 59 - to, 60 - a, 61 - team, 62 - of, 63 - professionals, 64 - who, 65 - ensure, 66 - our, 67 - members, 68 - find, 69 - love, 70 - quickly, 71 - and, 72 - successfully., 73 - We, 74 - provide, 75 - an, 76 - individual, 77 - approach, 78 - to, 79 - each, 80 - client,, 81 - as, 82 - well, 83 - as, 84 - the, 85 - individual, 86 - price, 87 - of, 88 - a, 89 - Romantic, 90 - Tour, 91 - to, 92 - Ukraine., 93 - Our, 94 - tours, 95 - allow, 96 - gentlemen, 97 - to, 98 - meet, 99 - beautiful,, 100 - intelligent, 101 - and, 102 - family-oriented, 103 - women, 104 - in, 105 - real, 106 - life., 107 - Romance, 108 - Abroad, 109 - Matchmaker, 110 - works, 111 - in, 112 - a, 113 - time-saving, 114 - and, 115 - discrete, 116 - manner., 117 - We, 118 - personally, 119 - meet, 120 - with, 121 - all, 122 - our, 123 - singles,, 124 - guide, 125 - you, 126 - through, 127 - the, 128 - entire, 129 - process, 130 - and, 131 - present, 132 - you, 133 - with, 134 - the, 135 - perfect, 136 - match.<br/>Press, 137 - “Request, 138 - Tour, 139 - Info”, 140 - button, 141 - and, 142 - let, 143 - us, 144 - do, 145 - all, 146 - the, 147 - hard, 148 - work, 149 - for, 150 - you.<br/>Find, 151 - HER, 152 - with, 153 - the, 154 - Romance, 155 - Abroad, 156 - service.] TOTAL WORDS - 157<br/></span>

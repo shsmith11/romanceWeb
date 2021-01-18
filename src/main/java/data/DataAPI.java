@@ -100,6 +100,23 @@ public class DataAPI {
         System.out.println(response.getStatusCode());
         return response.getStatusCode();
     }
+    public static String optionsCall(){
+        Response response = given()
+                .baseUri("https://petstore.swagger.io/")
+                //.header("Authorization","Bearer "+token)
+                .basePath("v2/pet/")
+                .when()
+                .options()
+                .then()
+                .statusCode(204)
+                .extract()
+                .response();
+        System.out.println("Here is Header1 -  "+response.getHeader("Date"));
+        System.out.println("Here is Header2 -  "+response.getHeader("Allow"));
+        System.out.println("Here is Header3 -  "+response.getHeader("Access-Control-Allow-Headers"));
+        System.out.println("Here is Header4 -  "+response.getHeader("Server"));
+        return response.getHeaders().getValue("Allow");
+    }
 
 
 }
