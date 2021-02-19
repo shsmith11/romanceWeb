@@ -7,14 +7,26 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import com.romanceabroad.ui.BasePage;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Helpers extends BasePage {
 
-    public Helpers(WebDriver driver) {
-        super(driver);
+    public Helpers(WebDriver driver, WebDriverWait explicitWait) {
+        super(driver, explicitWait);
+    }
+
+    static public void waitForLoad(WebDriver driver) {
+        ExpectedCondition<Boolean> pageLoadCondition = new
+                ExpectedCondition<Boolean>() {
+                    public Boolean apply(WebDriver driver) {
+                        return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+                    }
+                };
+        explicitWait.until(pageLoadCondition);
     }
 
     static public int randomInt(int begin, int end){
@@ -150,7 +162,7 @@ public class Helpers extends BasePage {
 
 
     //especially good for IE (ajax doesn't work well with IE)
-    public static void performClick(WebElement element, int i) {
+    public static void performClick(WebElement element) {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
         actions.click().build().perform();
@@ -265,6 +277,10 @@ public class Helpers extends BasePage {
     public static String getH1Title() {
         String title = driver.findElement(Locators.H1_TITLE).getText();
         return title;
+    }
+
+    public static String getElementAttributeValue(WebElement element, String Attribute){
+        return element.getAttribute(Attribute);
     }
 
 }

@@ -78,8 +78,14 @@ final public class Locators {
     public static String textPeopleFoundOnPageNoFound = "//h2[@class='text-center p10']";
     public static String textPeopleFoundOnPage ="//div[@class='lh30']";
     public static String buttonSearch = "//input[@id='main_search_button_user_advanced']";
-    public static String imageBlock = "(//a[@class='g-pic-border g-rounded']/img)[1]";
+    public static String imageBlock = "//a[@class='g-pic-border g-rounded']/img";
     public static String imageSearchResult = "//div[@class='g-users-gallery__photo']";
+    public static String userNameAgeGallery = "//div[@class='text-overflow']";
+    public static String buttonNextAtGallery = "//li[@class='next']/a";
+    public static String buttonLastAtGallery = "//li[@class='next']/following-sibling::li/a";
+    public static String buttonBeforeNextAtGallery = "//li[@class='next']/preceding-sibling::li/a";
+    public static String panelPageSelectorTagA = "//ul[@class='pagination']/li/a";
+    public static String panelPageSelectorTagLi = "//ul[@class='pagination']/li";
 
 
     // PHOTO page

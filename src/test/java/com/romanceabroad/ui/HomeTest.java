@@ -5,6 +5,10 @@ import data.PagesNames;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 
 public class HomeTest extends BaseTest {
 
@@ -52,5 +56,9 @@ public class HomeTest extends BaseTest {
     public void wordCountExample(){   //example of List and loops
         homePage.openPage(PagesLinks.mainUrl);
         softAssert.assertTrue(homePage.wordCounter()>10);
+    }
+    @Test
+    public void getTextFromFile() throws IOException {
+        homePage.textFromFile();
     }
 }

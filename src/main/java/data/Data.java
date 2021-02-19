@@ -26,6 +26,10 @@ final public class Data {
     //Search Data
     public static int minAgePrettywomanPage = 24;
     public static int maxAgePrettywomanPage = 67;
+    public static int imageOnPage = 12;
+    public static int trys = 10;
+    public static int tryMS = 100;
+
 
     //Expected Nav Menu Data
     public static HashMap<Enum,String> expectedH1 = new HashMap<>();

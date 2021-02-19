@@ -9,7 +9,7 @@ import java.util.List;
 
 public class BlogPage extends BasePage{
     public BlogPage(WebDriver driver) {
-        super(driver);
+        super(driver, explicitWait);
 
     }
     public List<WebElement> getArticlesMenuList(){return driver.findElements(By.xpath(Locators.articlesMenuList));}

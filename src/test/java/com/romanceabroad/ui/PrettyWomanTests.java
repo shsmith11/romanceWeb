@@ -48,4 +48,11 @@ public class PrettyWomanTests extends BaseTest {
         prettyWomanPage.setSortMode(sortMode);
         Assert.assertTrue(prettyWomanPage.imageSearchResult());
     }
+    @Test
+    public void checkUserAgesAtGallery() throws InterruptedException {
+        prettyWomanPage.openPage(PagesLinks.prettyWomanUrl);
+        prettyWomanPage.setMinMaxAgeSelect("18","80");
+        prettyWomanPage.buttonSearch().click();
+        prettyWomanPage.dataPageCollector();
+    }
 }

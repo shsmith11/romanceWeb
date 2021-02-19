@@ -2,7 +2,7 @@
 
 <suite name="TestSuite" parallel="classes" thread-count="1" verbose="1" >
 
-    <test name="APITests" enabled="true">
+    <test name="APITests" enabled="false">
         <groups>
             <run>
                 <include name="informer"/>
@@ -94,7 +94,7 @@
             <class name ="com.romanceabroad.ui.RegistrationTest">
                 <methods>
                     <include name="signUpDataValidationPopUpHome"/>
-                    <include name="signUpDataValidationRegistrationPage"/>
+                    <exclude name="signUpDataValidationRegistrationPage"/>
                 </methods>
             </class>
         </classes>
@@ -115,7 +115,7 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="ChromeTestCases" enabled="true">
+    <test name="ChromeTestCases" enabled="false">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.romanceabroad.ui.ContactUsTests">

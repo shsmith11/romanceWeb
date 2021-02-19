@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 199.238 s <<< FAILURE! - in TestSuite
+com.romanceabroad.ui.RegistrationTest.signUpDataValidationPopUpHome[sh11Kwvuwe@test.com, SH11EKtjN, true](3)  Time elapsed: 3.371 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=87.0.4280.141)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-A602HLO', ip: '192.168.50.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\WINDOWS\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:55581}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3dd09420ad18fb90260ab16fb510ddae
+	at com.romanceabroad.ui.RegistrationTest.signUpDataValidationPopUpHome(RegistrationTest.java:49)
+
+com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage[emailjohn@gmail.com, MysuperPass33#, Joker10, 18, Feb, 2059, 3446546567, Tampa](2)  Time elapsed: 27.523 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Cannot locate element with text: 2059
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-A602HLO', ip: '192.168.50.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
+Driver info: driver.version: unknown
+	at com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage(RegistrationTest.java:76)
+
+com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage[Mark.K2001@gmail.com, MysuperPass33#, lowBoundaryYear, 01, Jan, 1941, 3479639961, Tampa](4)  Time elapsed: 5.459 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Cannot locate element with text: 01
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-A602HLO', ip: '192.168.50.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
+Driver info: driver.version: unknown
+	at com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage(RegistrationTest.java:76)
+

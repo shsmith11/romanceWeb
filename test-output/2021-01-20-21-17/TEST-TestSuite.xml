@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="6.044" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="13"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Dropbox\QA\TestPro\TurboQA\romanceWeb\target\test-classes;C:\Dropbox\QA\TestPro\TurboQA\romanceWeb\target\classes;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\testng\testng\7.3.0\testng-7.3.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\ant\ant\1.10.3\ant-1.10.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\ant\ant-launcher\1.10.3\ant-launcher-1.10.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\inject\guice\4.2.2\guice-4.2.2-no_aop.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\yaml\snakeyaml\1.21\snakeyaml-1.21.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\rest-assured\rest-assured\4.3.3\rest-assured-4.3.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\codehaus\groovy\groovy\3.0.7\groovy-3.0.7.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.7\groovy-xml-3.0.7.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\httpmime\4.5.3\httpmime-4.5.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\rest-assured\xml-path\4.3.3\xml-path-4.3.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\rest-assured\json-path\4.3.3\json-path-4.3.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\codehaus\groovy\groovy-json\3.0.7\groovy-json-3.0.7.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\rest-assured\rest-assured-common\4.3.3\rest-assured-common-4.3.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="13"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-13.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Windows\Temp\surefire1882445504506075024\surefirebooter10449544320128535363.jar C:\Windows\Temp\surefire1882445504506075024 2021-01-20T16-17-40_935-jvmRun1 surefire12529016406592405117tmp surefire_05156901451672373104tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Dropbox\QA\TestPro\TurboQA\romanceWeb\target\test-classes;C:\Dropbox\QA\TestPro\TurboQA\romanceWeb\target\classes;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\testng\testng\7.3.0\testng-7.3.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\ant\ant\1.10.3\ant-1.10.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\ant\ant-launcher\1.10.3\ant-launcher-1.10.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\inject\guice\4.2.2\guice-4.2.2-no_aop.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\yaml\snakeyaml\1.21\snakeyaml-1.21.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\rest-assured\rest-assured\4.3.3\rest-assured-4.3.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\codehaus\groovy\groovy\3.0.7\groovy-3.0.7.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.7\groovy-xml-3.0.7.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\apache\httpcomponents\httpmime\4.5.3\httpmime-4.5.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\rest-assured\xml-path\4.3.3\xml-path-4.3.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\rest-assured\json-path\4.3.3\json-path-4.3.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\org\codehaus\groovy\groovy-json\3.0.7\groovy-json-3.0.7.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\io\rest-assured\rest-assured-common\4.3.3\rest-assured-common-4.3.3.jar;C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\WINDOWS\system32\config\systemprofile"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-01-14"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-13.0.2"/>
+    <property name="testng.dtd.http" value="true"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Dropbox\QA\TestPro\TurboQA\romanceWeb"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Windows\Temp\surefire1882445504506075024\surefirebooter10449544320128535363.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="13.0.2+8"/>
+    <property name="user.name" value="DESKTOP-A602HLO$"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\WINDOWS\system32\config\systemprofile\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\WINDOWS\TEMP\"/>
+    <property name="java.version" value="13.0.2"/>
+    <property name="user.dir" value="C:\Dropbox\QA\TestPro\TurboQA\romanceWeb"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-13.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven_3.6.3/bin;C:\Program Files\Java\jdk-13.0.2/bin;C:\Program Files\Java\jdk-13.0.2/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\QuickTime\QTSystem\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-15.0.1\bin;C:\apache-maven-3.6.3\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="13.0.2+8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="57.0"/>
+  </properties>
+  <testcase name="testAPIGetData" classname="APItests.APITestCOVID" time="3.595">
+    <system-out><![CDATA[[TestNGContentHandler] [WARN] It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >" at the top of your file, otherwise TestNG may fail or not work as expected.
+[TestNGContentHandler] [WARN] It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >" at the top of your file, otherwise TestNG may fail or not work as expected.
+1203
+200
+Date -  Wed, 20 Jan 2021 21:17:48 GMT
+Afghanistan - 54403
+Africa - 3349118
+Albania - 69238
+Algeria - 104341
+All - 97087760
+Andorra - 9308
+Angola - 19093
+Anguilla - 15
+Antigua-and-Barbuda - 190
+Argentina - 1819569
+Armenia - 165221
+Aruba - 6562
+Asia - 22274366
+Australia - 28740
+Austria - 398096
+Azerbaijan - 228028
+Bahamas - 8075
+Bahrain - 98260
+Bangladesh - 529687
+Barbados - 1095
+Belarus - 230494
+Belgium - 681250
+Belize - 11615
+Benin - 3557
+Bermuda - 684
+Bhutan - 850
+Bolivia - 191090
+Bosnia-and-Herzegovina - 118383
+Botswana - 18630
+Brazil - 8579575
+British-Virgin-Islands - 114
+Brunei - 174
+Bulgaria - 212927
+Burkina-Faso - 9414
+Burundi - 1253
+CAR - 4973
+Cabo-Verde - 13139
+Cambodia - 448
+Cameroon - 28010
+Canada - 723908
+Caribbean-Netherlands - 360
+Cayman-Islands - 381
+Chad - 3012
+Channel-Islands - 3398
+Chile - 680740
+China - 88557
+Colombia - 1939071
+Comoros - 1933
+Congo - 7709
+Costa-Rica - 186877
+Croatia - 226550
+Cuba - 19122
+Cura&ccedil;ao - 4535
+Cyprus - 29294
+Czechia - 909131
+DRC - 21140
+Denmark - 191505
+Diamond-Princess - 712
+Diamond-Princess- - 712
+Djibouti - 5913
+Dominica - 113
+Dominican-Republic - 198123
+Ecuador - 234315
+Egypt - 158174
+El-Salvador - 51437
+Equatorial-Guinea - 5365
+Eritrea - 1910
+Estonia - 38544
+Eswatini - 13789
+Ethiopia - 132034
+Europe - 28135301
+Faeroe-Islands - 650
+Falkland-Islands - 35
+Fiji - 55
+Finland - 41166
+France - 2965117
+French-Guiana - 15187
+French-Polynesia - 17697
+Gabon - 10019
+Gambia - 3938
+Georgia - 249934
+Germany - 2083664
+Ghana - 58431
+Gibraltar - 3845
+Greece - 149973
+Greenland - 30
+Grenada - 139
+Guadeloupe - 8980
+Guam - 32
+Guatemala - 151324
+Guinea - 14207
+Guinea-Bissau - 2510
+Guyana - 6950
+Haiti - 10907
+Honduras - 136068
+Hong-Kong - 9798
+Hungary - 354252
+Iceland - 5975
+India - 10610632
+Indonesia - 939948
+Iran - 1348316
+Iraq - 610598
+Ireland - 179324
+Isle-of-Man - 432
+Israel - 574718
+Italy - 2414166
+Ivory-Coast - 25383
+Jamaica - 14487
+Japan - 339774
+Jordan - 317405
+Kazakhstan - 171232
+Kenya - 99444
+Kuwait - 159264
+Kyrgyzstan - 83430
+Laos - 41
+Latvia - 57808
+Lebanon - 264647
+Lesotho - 7035
+Liberia - 1901
+Libya - 111124
+Liechtenstein - 2398
+Lithuania - 172060
+Luxembourg - 49204
+MS-Zaandam - 9
+MS-Zaandam- - 9
+Macao - 46
+Madagascar - 18301
+Malawi - 14851
+Malaysia - 169379
+Maldives - 14712
+Mali - 7897
+Malta - 16129
+Marshall-Islands - 4
+Martinique - 6263
+Mauritania - 16212
+Mauritius - 556
+Mayotte - 6981
+Mexico - 1668396
+Micronesia - 1
+Moldova - 154118
+Monaco - 1262
+Mongolia - 1568
+Montenegro - 56579
+Montserrat - 13
+Morocco - 462542
+Mozambique - 29396
+Myanmar - 135721
+Namibia - 31253
+Nepal - 268310
+Netherlands - 927110
+New-Caledonia - 44
+New-Zealand - 2267
+Nicaragua - 6204
+Niger - 4225
+Nigeria - 113305
+North-America - 28453210
+North-Macedonia - 89463
+Norway - 59669
+Oceania - 49667
+Oman - 132317
+Pakistan - 524783
+Palestine - 153590
+Panama - 301534
+Papua-New-Guinea - 835
+Paraguay - 123359
+Peru - 1073214
+Philippines - 505939
+Poland - 1450747
+Portugal - 581605
+Puerto-Rico - 39
+Qatar - 148000
+R&eacute;union - 9584
+Romania - 700898
+Russia - 3633952
+Rwanda - 11548
+S-Korea - 73518
+Saint-Kitts-and-Nevis - 35
+Saint-Lucia - 713
+Saint-Martin - 1146
+Saint-Pierre-Miquelon - 16
+Samoa - 2
+San-Marino - 2815
+Sao-Tome-and-Principe - 1170
+Saudi-Arabia - 365563
+Senegal - 23642
+Serbia - 377445
+Seychelles - 762
+Sierra-Leone - 3030
+Singapore - 59197
+Sint-Maarten - 1677
+Slovakia - 228778
+Slovenia - 152851
+Solomon-Islands - 17
+Somalia - 4744
+South-Africa - 1369426
+South-America - 14825377
+South-Sudan - 3773
+Spain - 2412318
+Sri-Lanka - 55189
+St-Barth - 300
+St-Vincent-Grenadines - 602
+Sudan - 26279
+Suriname - 7709
+Sweden - 537967
+Switzerland - 504918
+Syria - 13224
+Taiwan - 870
+Tajikistan - 13308
+Tanzania - 509
+Thailand - 12653
+Timor-Leste - 53
+Togo - 4383
+Trinidad-and-Tobago - 7415
+Tunisia - 188373
+Turkey - 2406216
+Turks-and-Caicos - 1125
+UAE - 263729
+UK - 3505754
+US-Virgin-Islands - 17
+USA - 24922630
+Uganda - 38628
+Ukraine - 1172038
+Uruguay - 33446
+Uzbekistan - 78163
+Vanuatu - 1
+Vatican-City - 27
+Venezuela - 121117
+Vietnam - 1544
+Wallis-and-Futuna - 4
+Western-Sahara - 10
+Yemen - 2115
+Zambia - 40949
+Zimbabwe - 29408
+Here is API data: 97087760
+]]></system-out>
+  </testcase>
+  <testcase name="testAPIGetCountryData[All](1)" classname="APItests.APITestCOVID" time="0.719">
+    <system-out><![CDATA[{
+    "get": "statistics",
+    "parameters": {
+        "country": "All"
+    },
+    "errors": [
+        
+    ],
+    "results": 1,
+    "response": [
+        {
+            "continent": "All",
+            "country": "All",
+            "population": null,
+            "cases": {
+                "new": "+477946",
+                "active": 25372079,
+                "critical": 112502,
+                "recovered": 69638424,
+                "1M_pop": "12455",
+                "total": 97087760
+            },
+            "deaths": {
+                "new": "+12949",
+                "1M_pop": "266.5",
+                "total": 2077257
+            },
+            "tests": {
+                "1M_pop": null,
+                "total": null
+            },
+            "day": "2021-01-20",
+            "time": "2021-01-20T21:00:05+00:00"
+        }
+    ]
+}
+679
+200
+Date -  Wed, 20 Jan 2021 21:17:50 GMT
+Here is API data: [97087760]
+]]></system-out>
+  </testcase>
+</testsuite>

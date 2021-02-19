@@ -1,0 +1,16 @@
+
+
+
+link to GIT  https://github.com/shsmith11/romanceWeb.git
+
+
+
+HW 19
+	added Data Providers in RegistrationTest
+	added registration_romance.csv, registration_romance_emails.csv
+	
+HW 20 Data Providers in RegistrationTest
+
+HW21 all actions repeated 	
+	overload in registration
+	override added in hometest

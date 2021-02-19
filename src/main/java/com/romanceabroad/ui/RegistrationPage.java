@@ -16,7 +16,7 @@ public class RegistrationPage extends BasePage{
     Select selectRegistrationFormYear;
 
     public RegistrationPage(WebDriver driver) {
-        super(driver);
+        super(driver, explicitWait);
     }
     // 1 page
     public WebElement buttonJoinForFree (){return driver.findElement(By.xpath(Locators.buttonJoinForFree));}

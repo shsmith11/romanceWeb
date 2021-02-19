@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ContactUsPage extends BasePage{
     public ContactUsPage(WebDriver driver) {
-        super(driver);
+        super(driver, explicitWait);
     }
     public List<WebElement> listReason = driver.findElements(By.xpath(Locators.selectReason));
     public List<WebElement> listErrorMsg = driver.findElements(By.xpath(Locators.errorMsg));

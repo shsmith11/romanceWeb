@@ -13,7 +13,7 @@ import java.util.List;
 
 public class LeftCornerMenuPage extends BasePage{
     public LeftCornerMenuPage(WebDriver driver) {
-        super(driver);
+        super(driver, explicitWait);
     }
 
 

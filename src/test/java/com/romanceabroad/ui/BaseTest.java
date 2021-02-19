@@ -15,7 +15,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
+
+import java.io.IOException;
 import java.lang.reflect.Method;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 
 public class BaseTest {
@@ -91,10 +95,13 @@ public class BaseTest {
         driver.manage().window().maximize();
        }
 
+
+
     @AfterMethod
     public void tearDown() throws InterruptedException {
        Thread.sleep(5000);
        driver.quit();
     }
+
 
 }

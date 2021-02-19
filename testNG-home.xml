@@ -2,25 +2,20 @@
 
 <suite name="TestSuite" parallel="none" >
 
-    <test name="HomeTests" enabled="true">
-        <parameter name="browser" value="firefox"/>
+    <test name="APITests" enabled="true">
         <groups>
             <run>
-                <include name="ie"/>
-                <include name="admin"/>
-                <include name="user"/>
+                <include name="informer"/>
             </run>
         </groups>
-
         <classes>
-            <class name ="com.romanceabroad.ui.HomeTest">
-                <methods>
-                    <include name=".*Home.*"/>
-                    <include name=".*Frame.*"/>
-                    <include name="isHomePage"/>
-                    <exclude name="justFaiTest"/>
-                </methods>
 
+            <class name ="APItests.APITestCOVID">
+                <parameter name="country" value="All" />
+                <methods>
+                    <include name="testAPIGetData"/>
+                    <include name="testAPIGetCountryData"/>
+                </methods>
             </class>
         </classes>
     </test>

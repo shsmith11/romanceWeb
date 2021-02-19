@@ -3,6 +3,10 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.Duration;
 
 public class BasePage {
@@ -15,7 +19,7 @@ public class BasePage {
         driver.get(url);
     }
 
-    public BasePage(WebDriver driver) {
+    public BasePage(WebDriver driver, WebDriverWait explicitWait) {
         this.driver = driver;
         this.explicitWait = new WebDriverWait(driver, 10);
         this.fluentWait = new FluentWait<>(this.driver)
@@ -24,9 +28,17 @@ public class BasePage {
                 .ignoring(ElementClickInterceptedException.class)
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(TimeoutException.class)
-                .ignoring(NoSuchElementException.class);
+                .ignoring(NoSuchElementException.class)
+                .ignoring(StaleElementReferenceException.class);
         action = new Actions(this.driver);
         }
 
+        // override example
 
+    public void textFromFile() throws IOException {
+        Files.readAllLines(Paths.get("HWs.txt")).stream().forEach(s-> {
+            String text = s.toUpperCase();
+            System.out.println("Parent method TEXT - "+ text);
+        });
+    }
 }

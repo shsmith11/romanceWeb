@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-TestSuite" class="navigator-link">
+              <span class="suite-name border-failed">TestSuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-TestSuite" class="navigator-link ">
+                    <span>C:\Dropbox\QA\TestPro\TurboQA\romanceWeb\testNG.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-TestSuite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-TestSuite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-TestSuite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-TestSuite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-TestSuite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-TestSuite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">9 methods, 3 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestSuite" class="hide-methods failed suite-TestSuite"> (hide)</a> <!-- hide-methods failed suite-TestSuite -->
+                      <a href="#" panel-name="suite-TestSuite" class="show-methods failed suite-TestSuite"> (show)</a> <!-- show-methods failed suite-TestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-TestSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTest" class="method navigator-link" hash-for-method="signUpDataValidationPopUpHome(sh11Kwvuwe@test.com, SH11EKtjN, true)">signUpDataValidationPopUpHome(sh11Kwvuwe@test.com, SH11EKtjN, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTest" class="method navigator-link" hash-for-method="signUpDataValidationRegistrationPage(emailjohn@gmail.com, MysuperPass33#, Joker10, 18, Feb, 2059, 3446546567, Tampa)">signUpDataValidationRegistrationPage(emailjohn@gmail.com, MysuperPass33#, Joker10, 18, Feb, 2059, 3446546567, Tampa)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTest" class="method navigator-link" hash-for-method="signUpDataValidationRegistrationPage(Mark.K2001@gmail.com, MysuperPass33#, lowBoundaryYear, 01, Jan, 1941, 3479639961, Tampa)">signUpDataValidationRegistrationPage(Mark.K2001@gmail.com, MysuperPass33#, lowBoundaryYear, 01, Jan, 1941, 3479639961, Tampa)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-TestSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-TestSuite" class="hide-methods passed suite-TestSuite"> (hide)</a> <!-- hide-methods passed suite-TestSuite -->
+                      <a href="#" panel-name="suite-TestSuite" class="show-methods passed suite-TestSuite"> (show)</a> <!-- show-methods passed suite-TestSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-TestSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTest" class="method navigator-link" hash-for-method="signUpDataValidationPopUpHome(sh11Kwvuwe@test.com, SH11EKtjN, true)">signUpDataValidationPopUpHome(sh11Kwvuwe@test.com, SH11EKtjN, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTest" class="method navigator-link" hash-for-method="signUpDataValidationPopUpHome(email_bad, SH11EKtjN, false)">signUpDataValidationPopUpHome(email_bad, SH11EKtjN, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTest" class="method navigator-link" hash-for-method="signUpDataValidationRegistrationPage(wandergarten-paul@gmail.com, MysuperPass33#, HighBoundaryYear, 31, Dec, 2003, 3471499382, Tampa)">signUpDataValidationRegistrationPage(wandergarten-paul@gmail.com, MysuperPass33#, HighBoundaryYear, 31, Dec, 2003, 3471499382, Tampa)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTest" class="method navigator-link" hash-for-method="signUpDataValidationRegistrationPage(emailLubov@gmail.com, MysuperPass33#, JohnCat11, 9, May, 1984, 3471423367, Tampa)">signUpDataValidationRegistrationPage(emailLubov@gmail.com, MysuperPass33#, JohnCat11, 9, May, 1984, 3471423367, Tampa)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTest" class="method navigator-link" hash-for-method="signUpDataValidationRegistrationPage(email11dda@gmail.com, MysuperPass33#, Ruberoid18, 6, Mar, 1994, 3479652367, Tampa)">signUpDataValidationRegistrationPage(email11dda@gmail.com, MysuperPass33#, Ruberoid18, 6, Mar, 1994, 3479652367, Tampa)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTest" class="method navigator-link" hash-for-method="signUpDataValidationRegistrationPage(Irina87.guru@gmail.com, MysuperPass33#, Lancaster, 12, Jun, 2000, 3473792286, Tampa)">signUpDataValidationRegistrationPage(Irina87.guru@gmail.com, MysuperPass33#, Lancaster, 12, Jun, 2000, 3473792286, Tampa)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-TestSuite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-TestSuite" class="panel TestSuite">
+          <div class="suite-TestSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.romanceabroad.ui.RegistrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpDataValidationPopUpHome(sh11Kwvuwe@test.com, SH11EKtjN, true)">
+                  </a> <!-- signUpDataValidationPopUpHome(sh11Kwvuwe@test.com, SH11EKtjN, true) -->
+                  <span class="method-name">signUpDataValidationPopUpHome</span>
+                  <span class="parameters">(sh11Kwvuwe@test.com, SH11EKtjN, true)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=87.0.4280.141)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-A602HLO&apos;, ip: &apos;192.168.50.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\WINDOWS\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:55581}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3dd09420ad18fb90260ab16fb510ddae
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at data.Helpers.inputEmail(Helpers.java:68)
+	at com.romanceabroad.ui.RegistrationPage.inputEmail(RegistrationPage.java:108)
+	at com.romanceabroad.ui.RegistrationTest.signUpDataValidationPopUpHome(RegistrationTest.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 17 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpDataValidationRegistrationPage(emailjohn@gmail.com, MysuperPass33#, Joker10, 18, Feb, 2059, 3446546567, Tampa)">
+                  </a> <!-- signUpDataValidationRegistrationPage(emailjohn@gmail.com, MysuperPass33#, Joker10, 18, Feb, 2059, 3446546567, Tampa) -->
+                  <span class="method-name">signUpDataValidationRegistrationPage</span>
+                  <span class="parameters">(emailjohn@gmail.com, MysuperPass33#, Joker10, 18, Feb, 2059, 3446546567, Tampa)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate element with text: 2059
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-A602HLO&apos;, ip: &apos;192.168.50.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at com.romanceabroad.ui.RegistrationPage.selectDateOnReg(RegistrationPage.java:102)
+	at com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage(RegistrationTest.java:76)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 12 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpDataValidationRegistrationPage(Mark.K2001@gmail.com, MysuperPass33#, lowBoundaryYear, 01, Jan, 1941, 3479639961, Tampa)">
+                  </a> <!-- signUpDataValidationRegistrationPage(Mark.K2001@gmail.com, MysuperPass33#, lowBoundaryYear, 01, Jan, 1941, 3479639961, Tampa) -->
+                  <span class="method-name">signUpDataValidationRegistrationPage</span>
+                  <span class="parameters">(Mark.K2001@gmail.com, MysuperPass33#, lowBoundaryYear, 01, Jan, 1941, 3479639961, Tampa)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate element with text: 01
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-A602HLO&apos;, ip: &apos;192.168.50.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at com.romanceabroad.ui.RegistrationPage.selectDateOnReg(RegistrationPage.java:100)
+	at com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage(RegistrationTest.java:76)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 12 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestSuite-class-failed -->
+          <div class="suite-TestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.romanceabroad.ui.RegistrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpDataValidationPopUpHome(sh11Kwvuwe@test.com, SH11EKtjN, true)">
+                  </a> <!-- signUpDataValidationPopUpHome(sh11Kwvuwe@test.com, SH11EKtjN, true) -->
+                  <span class="method-name">signUpDataValidationPopUpHome</span>
+                  <span class="parameters">(sh11Kwvuwe@test.com, SH11EKtjN, true)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpDataValidationPopUpHome(email_bad, SH11EKtjN, false)">
+                  </a> <!-- signUpDataValidationPopUpHome(email_bad, SH11EKtjN, false) -->
+                  <span class="method-name">signUpDataValidationPopUpHome</span>
+                  <span class="parameters">(email_bad, SH11EKtjN, false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpDataValidationRegistrationPage(wandergarten-paul@gmail.com, MysuperPass33#, HighBoundaryYear, 31, Dec, 2003, 3471499382, Tampa)">
+                  </a> <!-- signUpDataValidationRegistrationPage(wandergarten-paul@gmail.com, MysuperPass33#, HighBoundaryYear, 31, Dec, 2003, 3471499382, Tampa) -->
+                  <span class="method-name">signUpDataValidationRegistrationPage</span>
+                  <span class="parameters">(wandergarten-paul@gmail.com, MysuperPass33#, HighBoundaryYear, 31, Dec, 2003, 3471499382, Tampa)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpDataValidationRegistrationPage(emailLubov@gmail.com, MysuperPass33#, JohnCat11, 9, May, 1984, 3471423367, Tampa)">
+                  </a> <!-- signUpDataValidationRegistrationPage(emailLubov@gmail.com, MysuperPass33#, JohnCat11, 9, May, 1984, 3471423367, Tampa) -->
+                  <span class="method-name">signUpDataValidationRegistrationPage</span>
+                  <span class="parameters">(emailLubov@gmail.com, MysuperPass33#, JohnCat11, 9, May, 1984, 3471423367, Tampa)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpDataValidationRegistrationPage(email11dda@gmail.com, MysuperPass33#, Ruberoid18, 6, Mar, 1994, 3479652367, Tampa)">
+                  </a> <!-- signUpDataValidationRegistrationPage(email11dda@gmail.com, MysuperPass33#, Ruberoid18, 6, Mar, 1994, 3479652367, Tampa) -->
+                  <span class="method-name">signUpDataValidationRegistrationPage</span>
+                  <span class="parameters">(email11dda@gmail.com, MysuperPass33#, Ruberoid18, 6, Mar, 1994, 3479652367, Tampa)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpDataValidationRegistrationPage(Irina87.guru@gmail.com, MysuperPass33#, Lancaster, 12, Jun, 2000, 3473792286, Tampa)">
+                  </a> <!-- signUpDataValidationRegistrationPage(Irina87.guru@gmail.com, MysuperPass33#, Lancaster, 12, Jun, 2000, 3473792286, Tampa) -->
+                  <span class="method-name">signUpDataValidationRegistrationPage</span>
+                  <span class="parameters">(Irina87.guru@gmail.com, MysuperPass33#, Lancaster, 12, Jun, 2000, 3473792286, Tampa)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestSuite-class-passed -->
+        </div> <!-- panel TestSuite -->
+        <div panel-name="test-xml-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Dropbox\QA\TestPro\TurboQA\romanceWeb\testNG.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; parallel=&quot;classes&quot; name=&quot;TestSuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;classes&quot; name=&quot;ChromeTestCasesRegistration&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.romanceabroad.ui.RegistrationTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;signUpDataValidationPopUpHome&quot;/&gt;
+          &lt;include name=&quot;signUpDataValidationRegistrationPage&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.romanceabroad.ui.RegistrationTest --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ChromeTestCasesRegistration --&gt;
+&lt;/suite&gt; &lt;!-- TestSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for TestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">ChromeTestCasesRegistration (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for TestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for TestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_TestSuite');
+function tableData_TestSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(9);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'signUpDataValidationRegistrationPage')
+data.setCell(0, 2, 'com.romanceabroad.ui.RegistrationTest')
+data.setCell(0, 3, 27548);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'signUpDataValidationPopUpHome')
+data.setCell(1, 2, 'com.romanceabroad.ui.RegistrationTest')
+data.setCell(1, 3, 11727);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'signUpDataValidationRegistrationPage')
+data.setCell(2, 2, 'com.romanceabroad.ui.RegistrationTest')
+data.setCell(2, 3, 9184);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'signUpDataValidationRegistrationPage')
+data.setCell(3, 2, 'com.romanceabroad.ui.RegistrationTest')
+data.setCell(3, 3, 8286);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'signUpDataValidationRegistrationPage')
+data.setCell(4, 2, 'com.romanceabroad.ui.RegistrationTest')
+data.setCell(4, 3, 8283);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'signUpDataValidationRegistrationPage')
+data.setCell(5, 2, 'com.romanceabroad.ui.RegistrationTest')
+data.setCell(5, 3, 8203);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'signUpDataValidationRegistrationPage')
+data.setCell(6, 2, 'com.romanceabroad.ui.RegistrationTest')
+data.setCell(6, 3, 5466);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'signUpDataValidationPopUpHome')
+data.setCell(7, 2, 'com.romanceabroad.ui.RegistrationTest')
+data.setCell(7, 3, 5321);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'signUpDataValidationPopUpHome')
+data.setCell(8, 2, 'com.romanceabroad.ui.RegistrationTest')
+data.setCell(8, 3, 3372);
+window.suiteTableData['TestSuite']= { tableData: data, tableDiv: 'times-div-TestSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-TestSuite">
+              </div> <!-- times-div-TestSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for TestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.romanceabroad.ui.RegistrationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTest.signUpDataValidationPopUpHome(java.lang.St...)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">signUpDataValidationPopUpHome(sh11Kwvuwe@test.com, SH11EKtjN, true)</span>
+                <span class="method-start">9581 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">21310 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTest.signUpDataValidationPopUpHome(java.lang.St...)</span>
+                <span class="method-start">27177 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">signUpDataValidationPopUpHome(email_bad, SH11EKtjN, false)</span>
+                <span class="method-start">34067 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">39389 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTest.signUpDataValidationPopUpHome(java.lang.St...)</span>
+                <span class="method-start">45026 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">signUpDataValidationPopUpHome(sh11Kwvuwe@test.com, SH11EKtjN, true)</span>
+                <span class="method-start">50947 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">54323 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage(java....)</span>
+                <span class="method-start">59993 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">signUpDataValidationRegistrationPage(email11dda@gmail.com, MysuperPass33#, Ruberoid18, 6, Mar, 1994, 3479652367, Tampa)</span>
+                <span class="method-start">65985 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">75169 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage(java....)</span>
+                <span class="method-start">80860 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">signUpDataValidationRegistrationPage(emailjohn@gmail.com, MysuperPass33#, Joker10, 18, Feb, 2059, 3446546567, Tampa)</span>
+                <span class="method-start">86940 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">114489 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage(java....)</span>
+                <span class="method-start">120135 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">signUpDataValidationRegistrationPage(emailLubov@gmail.com, MysuperPass33#, JohnCat11, 9, May, 1984, 3471423367, Tampa)</span>
+                <span class="method-start">126047 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">134251 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage(java....)</span>
+                <span class="method-start">139901 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">signUpDataValidationRegistrationPage(Mark.K2001@gmail.com, MysuperPass33#, lowBoundaryYear, 01, Jan, 1941, 3479639961, Tampa)</span>
+                <span class="method-start">145768 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">151234 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage(java....)</span>
+                <span class="method-start">156860 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">signUpDataValidationRegistrationPage(Irina87.guru@gmail.com, MysuperPass33#, Lancaster, 12, Jun, 2000, 3473792286, Tampa)</span>
+                <span class="method-start">162731 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">171018 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTest.signUpDataValidationRegistrationPage(java....)</span>
+                <span class="method-start">176663 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">signUpDataValidationRegistrationPage(wandergarten-paul@gmail.com, MysuperPass33#, HighBoundaryYear, 31, Dec, 2003, 3471499382, Tampa)</span>
+                <span class="method-start">182561 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">190845 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

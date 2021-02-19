@@ -7,6 +7,10 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,7 +25,7 @@ public class HomePage extends BasePage{
     public WebElement textSection (){return driver.findElement(By.xpath(Locators.textSection));}
 
     public HomePage(WebDriver driver) {
-        super(driver);
+        super(driver, explicitWait);
     }
 
     public boolean isHome(){
@@ -61,6 +65,12 @@ public class HomePage extends BasePage{
         }
         System.out.println(words+" TOTAL WORDS - " + words.size());
         return words.size();
+    }
+    public void textFromFile() throws IOException {
+        Files.readAllLines(Paths.get("HWs.txt")).stream().forEach(s-> {
+            String text = s.toUpperCase();
+            System.out.println("Child method TEXT - "+ text);
+        });
     }
 
 }

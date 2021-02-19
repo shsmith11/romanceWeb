@@ -9,7 +9,7 @@ import java.util.List;
 
 public class PhotosPage extends BasePage{
     public PhotosPage(WebDriver driver) {
-        super(driver);
+        super(driver, explicitWait);
     }
     public String getExpectedTitle() {
         return "Ukrainian women photos: ladies pictures at Marry Ukrainian Lady";

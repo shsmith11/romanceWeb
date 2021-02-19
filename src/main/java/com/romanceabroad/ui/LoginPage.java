@@ -14,7 +14,7 @@ public class LoginPage extends BasePage {
     public WebElement buttonLOgIn(){return driver.findElement(By.xpath(Locators.buttonLOgIn));}
 
     public LoginPage(WebDriver driver) {
-        super(driver);
+        super(driver, explicitWait);
     }
 
 

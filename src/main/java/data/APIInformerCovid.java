@@ -39,6 +39,25 @@ public class APIInformerCovid {
         return response;
     }
 
+    public static Integer getCountryCallTotalCases(String country) { /* country name or All for all country statistics*/
+        Integer totalCases =
+                given()
+                        .baseUri("https://covid-193.p.rapidapi.com")
+                        .header("x-rapidapi-key", "dd66c9131emsh04e2031dfc74d8ap1e6be1jsn60baea46aade")
+                        .header("x-rapidapi-host", "covid-193.p.rapidapi.com")
+                        .param("country", country) /* country name or All for all country statistics*/
+                        .basePath("/statistics")
+                        .contentType(ContentType.JSON)
+                        .when()
+                        .get()
+                        .then()
+                        .statusCode(200)
+                        .extract()
+                        .path("response.cases.total[0]");
+
+                        return totalCases;
+    }
+
     public static Response getAllCountryCall(){
         Response response =
             given()
@@ -81,7 +100,6 @@ public class APIInformerCovid {
         return jsonPath.getObject("$", InformerCovidAllAPI.class);
     }
     public static Integer getTotalCasesAPI(JsonPath jsonPath){
-        Integer totalCases=0;
         HashMap<String,Integer> casesHash = new HashMap<>();
         List<Integer> cases = jsonPath.getList("response.cases.total");
         List<String> countrys = jsonPath.getList("response.country");
@@ -96,6 +114,7 @@ public class APIInformerCovid {
         }
         //System.out.println("World total: " + cases);
 
+        Integer totalCases;
         return totalCases=casesHash.get("All");
     }
 
