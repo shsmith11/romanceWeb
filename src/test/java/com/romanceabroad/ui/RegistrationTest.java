@@ -11,6 +11,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class RegistrationTest extends BaseTest{
+    public static final boolean testCase1 = true;
+    public static final boolean testCase2 = true;
+    public static final boolean testCase3 = true;
+    public static final boolean testCase4 = true;
 
     @DataProvider(name = "Registration2")
     public static Object[][] testRegistration2(){
@@ -20,7 +24,6 @@ public class RegistrationTest extends BaseTest{
                 {Data.emailReg , Data.userReg, true},
         };
     }
-
     @DataProvider(name = "RegistrationEmailsOnly")
     public static Object[][] testRegistrationEmails() throws Exception{
         ArrayList<Object[]> out = new ArrayList<>();
@@ -40,7 +43,7 @@ public class RegistrationTest extends BaseTest{
         return out.toArray(new Object[out.size()][]);
     }
 
-    @Test (dataProvider = "Registration2")        // sign up through "JOIN FOR FREE NOW" button at home page with POPUP frames
+    @Test (dataProvider = "Registration2", priority = 1, enabled = testCase1, groups = {"Chrome, Firefox, Smoke, Functional"})        // sign up through "JOIN FOR FREE NOW" button at home page with POPUP frames
     public void signUpDataValidationPopUpHome(String email, String user, boolean requirement) {
         userRegistrationPage.openPage(PagesLinks.mainUrl);
         userRegistrationPage.openFormPopUpFromHome();
@@ -65,7 +68,7 @@ public class RegistrationTest extends BaseTest{
         }
     }
 
-    @Test (dataProvider = "Registration")        // sign up through "Registration page"
+    @Test (dataProvider = "Registration", priority = 1, enabled = testCase1, groups = {"Chrome, Firefox, Smoke, Functional"})        // sign up through "Registration page"
     public void signUpDataValidationRegistrationPage(String email,String pass,String user,String day,String month,String year,String phone, String location){
         userRegistrationPage.openPage(PagesLinks.registrationUserPage);
         userRegistrationPage.inputEmail(email, userRegistrationPage.inputRegFormEmailXpath()); //Random email

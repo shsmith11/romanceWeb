@@ -9,7 +9,7 @@ final public class Locators {
     //Header locators
     //Nav bar locators
     public static String navMenuItems="//div/ul/li[@class='nav-item']";
-    public static String navMenuItemHome ="//ul/li[@class='nav-item']/a[@href='#']";
+    public static String navMenuItemHome ="//ul/li[@class='nav-item']//a[@href='#']";
     public static String navMenuItemTourToUkraine ="(//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine'])[2]";
     public static String navMenuClosed ="//div/a[@class='uam-top link-open-menu btn-slide']";
 
@@ -18,7 +18,7 @@ final public class Locators {
     public static String buttonRequestTourInfo ="//a[@href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc']";
     public static String textSectionThirdParagraph ="//*[@id='about']//p[3]";
     public static String textSectionHeader ="//section[@id='about']//div/h2[@class='section-heading ']";
-    public static String carouselInner ="//a[@id='carouselExampleIndicators']/div[@class='carousel-inner']";
+    public static String carouselInner ="//a[@id='carouselExampleIndicators']//div[@class='carousel-inner']";
     public static String textSectionBoldText ="//p//b[contains(text(),'Request Tour Info')]";
     public static String linkFacebookFooter ="//a[contains(@href,'faceMainbook')]";
     public static String textSection="//section//div[@class='col-lg-6']"; // text in the middle of body h2
@@ -78,14 +78,14 @@ final public class Locators {
     public static String textPeopleFoundOnPageNoFound = "//h2[@class='text-center p10']";
     public static String textPeopleFoundOnPage ="//div[@class='lh30']";
     public static String buttonSearch = "//input[@id='main_search_button_user_advanced']";
-    public static String imageBlock = "//a[@class='g-pic-border g-rounded']/img";
+    public static String imageBlock = "//a[@class='g-pic-border g-rounded']//img";
     public static String imageSearchResult = "//div[@class='g-users-gallery__photo']";
     public static String userNameAgeGallery = "//div[@class='text-overflow']";
-    public static String buttonNextAtGallery = "//li[@class='next']/a";
-    public static String buttonLastAtGallery = "//li[@class='next']/following-sibling::li/a";
-    public static String buttonBeforeNextAtGallery = "//li[@class='next']/preceding-sibling::li/a";
-    public static String panelPageSelectorTagA = "//ul[@class='pagination']/li/a";
-    public static String panelPageSelectorTagLi = "//ul[@class='pagination']/li";
+    public static String buttonNextAtGallery = "//li[@class='next']//a";
+    public static String buttonLastAtGallery = "//li[@class='next']//following-sibling::li//a";
+    public static String buttonBeforeNextAtGallery = "//li[@class='next']/preceding-sibling::li//a";
+    public static String panelPageSelectorTagA = "//ul[@class='pagination']//li//a";
+    public static String panelPageSelectorTagLi = "//ul[@class='pagination']//li";
 
 
     // PHOTO page
@@ -95,13 +95,13 @@ final public class Locators {
 
     //BLOG page locators
     public static String headerMenuOuterContainer = "//div[@class='header-container-outer' and @id='slidemenu-outer']";
-    public static String articlesMenuList = "//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li/div/a/div/div";
+    public static String articlesMenuList = "//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li//div//a//div//div";
     public static String articlesOnPageList = "//div//p";
 
     //public static String articlesMenuList_up = "//div[@class='inside account_menu']";
 
-    public static String hrefBlogListItem = "div[@class='info-content-block wysiwyg']/ul/li/a[@href='/content/view/beautiful-urkainian-girls']";
-    public static String hrefBlogList = "//div[@class='info-content-block wysiwyg']/ul"; // for array use
+    public static String hrefBlogListItem = "div[@class='info-content-block wysiwyg']//ul//li//a[@href='/content/view/beautiful-urkainian-girls']";
+    public static String hrefBlogList = "//div[@class='info-content-block wysiwyg']//ul"; // for array use
     public static String sideMenuBlog ="div[@class='inside account_menu']/ul"; // for array use
     public static String headerPhotoMenuBlog = "//div[@class='slick-track']//div[@class='user']"; // for array use
 
@@ -115,7 +115,7 @@ final public class Locators {
     public static String inputSecurityCaptcha = "//input[@id='g-recaptcha-response' and @name='captcha_code']";
     public static String imgSecurityCaptcha = "//img[contains(@src,'romanceabroad.com/temp/captcha/')]";
     public static String buttonSend = "//input[@name='btn_save' and @type='submit']";
-    public static String errorMsg = "//div[@class='ajax_notice']/div[@class='error alert-danger alert-warning_pop_']";
+    public static String errorMsg = "//div[@class='ajax_notice']//div[@class='error alert-danger alert-warning_pop_']";
 
     // LOG IN page locators
 
@@ -138,8 +138,7 @@ final public class Locators {
 
     public static By H1_TITLE = By.xpath("//h1");
 
-    public void Tttt(){
 
-    }
+
 
 }

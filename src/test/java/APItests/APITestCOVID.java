@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class APITestCOVID {
 
-    @Test
+    @Test(groups = {"API"})
     public void testAPIGetData(){
         //DataAPI dataAPI = new DataAPI();
         var responceData = APIInformerCovid.getAllCountryCall();
@@ -19,7 +19,7 @@ public class APITestCOVID {
         Assert.assertEquals(200,APIInformerCovid.getServerCodeResponce(responceData));
     }
     @Parameters({"country"})
-    @Test
+    @Test(groups = {"API"})
     public void testAPIGetCountryData(@Optional("All") String country){
         //DataAPI dataAPI = new DataAPI();
         var responceData = APIInformerCovid.getCountryCall(country);
@@ -28,7 +28,7 @@ public class APITestCOVID {
         System.out.println("Here is API data: " + APIInformerCovid.getStringElementAPI(jsonPath));
         Assert.assertTrue(APIInformerCovid.getStringElementAPI(jsonPath)!=null);
     }
-    @Test
+    @Test(groups = {"API"})
     public void getCountryCallTotalCasesATString(){
         Integer responseString = APIInformerCovid.getCountryCallTotalCases("All");
         System.out.println("Total World cases: " + responseString);

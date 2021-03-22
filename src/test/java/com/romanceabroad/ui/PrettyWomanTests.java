@@ -11,6 +11,10 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 
 public class PrettyWomanTests extends BaseTest {
+    public static final boolean testCase1 = true;
+    public static final boolean testCase2 = true;
+    public static final boolean testCase3 = true;
+    public static final boolean testCase4 = true;
 
     @DataProvider(name = "SearchData")
     public Object[][] SearchPrettyWoman() {
@@ -25,13 +29,13 @@ public class PrettyWomanTests extends BaseTest {
     }
 
 
-    @Test
+    @Test (priority = 1, enabled = testCase1, groups = {"AllBrowsers, Smoke, Functional"})
     public void isPrettyWomanPage(){
         prettyWomanPage.openPage(PagesLinks.prettyWomanUrl);
         Assert.assertEquals(driver.getTitle(),prettyWomanPage.pageTitleExpected());
     }
 
-    @Test
+    @Test (priority = 1, enabled = testCase2, groups = {"AllBrowsers, Smoke, Functional"})
     public void checkSearchButtonResult() {
         prettyWomanPage.openPage(PagesLinks.prettyWomanUrl);
         prettyWomanPage.setMinMaxAgeSelect();
@@ -40,7 +44,7 @@ public class PrettyWomanTests extends BaseTest {
         Assert.assertTrue(prettyWomanPage.imageSearchResult());
 
     }
-    @Test (dataProvider = "SearchData")
+    @Test (dataProvider = "SearchData", priority = 2, enabled = testCase3, groups = {"AllBrowsers, Functional"})
     public void checkSearchButtonResultAdvanced(String minAge, String maxAge, String sortMode) {
         prettyWomanPage.openPage(PagesLinks.prettyWomanUrl);
         prettyWomanPage.setMinMaxAgeSelect(minAge,maxAge);
@@ -48,7 +52,7 @@ public class PrettyWomanTests extends BaseTest {
         prettyWomanPage.setSortMode(sortMode);
         Assert.assertTrue(prettyWomanPage.imageSearchResult());
     }
-    @Test
+    @Test (priority = 2, enabled = testCase4, groups = {"AllBrowsers, Smoke, Functional"})
     public void checkUserAgesAtGallery() throws InterruptedException {
         prettyWomanPage.openPage(PagesLinks.prettyWomanUrl);
         prettyWomanPage.setMinMaxAgeSelect("18","80");

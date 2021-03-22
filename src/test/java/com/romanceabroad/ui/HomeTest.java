@@ -19,23 +19,23 @@ public class HomeTest extends BaseTest {
     public static final boolean testCase5 = false;
     public static final boolean testCase6 = true;
 
-    @Test (priority = 2, enabled = testCase1, groups = {"ie"})
+    @Test (priority = 1, enabled = testCase1, groups = {"IE"})
     public void isHomePage(){
         homePage.openPage(PagesLinks.mainUrl);
         Assert.assertTrue(homePage.isHome());
     }
-    @Test (priority = 2, enabled = testCase2, groups = {"user", "admin"})
+    @Test (priority = 3, enabled = testCase2, groups = {"AllBrowsers, Smoke"})
     public void iFrameButtonTest(){
         homePage.openPage(PagesLinks.mainUrl);
         Assert.assertTrue(homePage.isClickable());
     }
-    @Test (priority = 2, enabled = testCase3, groups = {"user", "admin"})
+    @Test (priority = 4, enabled = testCase3, groups = {"Chrome, Smoke, Functional"})
     public void iFrameButtonTestAction(){
         homePage.openPage(PagesLinks.mainUrl);
         homePage.clickablePlayButtonCheck();
         Assert.assertTrue(homePage.isVideoPlaying());
     }
-    @Test (priority = 2, enabled = testCase4, groups = {"ie", "user", "admin"})
+    @Test (priority = 1, enabled = testCase4, groups = {"AllBrowsers, Smoke, Functional"})
     public void navMenuOpenLinksCheck(){
         leftCornerMenuPage.openPage(PagesLinks.mainUrl);
         leftCornerMenuPage.getAllNavMenuItems();
@@ -47,17 +47,17 @@ public class HomeTest extends BaseTest {
         Assert.assertTrue(leftCornerMenuPage.checkAllNavMenuItems(PagesNames.UKRAINE));
         Assert.assertTrue(leftCornerMenuPage.checkAllNavMenuItems(PagesNames.BLOG));
     }
-    @Test (priority = 2, enabled = testCase5, groups = {"ie", "user", "admin"})
+    @Test (priority = 5, enabled = testCase5, groups = {"AllBrowsers, Smoke, Functional"})
     public void justFaiTest(){
         homePage.openPage(PagesLinks.mainUrl);
         Assert.fail();
     }
-    @Test (priority = 2, enabled = testCase6, groups = {"ie", "user", "admin"})
+    @Test (priority = 5, enabled = testCase6, groups = {"AllBrowsers, Smoke, Functional"})
     public void wordCountExample(){   //example of List and loops
         homePage.openPage(PagesLinks.mainUrl);
         softAssert.assertTrue(homePage.wordCounter()>10);
     }
-    @Test
+    @Test (priority = 5, enabled = testCase6, groups = {"Functional"})
     public void getTextFromFile() throws IOException {
         homePage.textFromFile();
     }
